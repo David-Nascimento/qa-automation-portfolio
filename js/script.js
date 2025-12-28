@@ -22,7 +22,7 @@ elements.forEach(el => observer.observe(el));
   let mouseY = window.innerHeight/2;
   let posX = mouseX;
   let posY = mouseY;
-  const ease = 0.18; // lower = smoother/slower
+  const ease = 0.36; // higher = snappier (less smoothing)
 
   document.addEventListener('mousemove', (e) => {
     mouseX = e.clientX;
