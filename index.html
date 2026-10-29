@@ -1,659 +1,391 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="David Nascimento - QA Automation Engineer especializado em automação de testes Web e APIs, frameworks de teste e integração CI/CD.">
-  <meta name="keywords" content="QA Automation, Testes Automatizados, Ruby, RSpec, Capybara, Cypress, Selenium, CI/CD">
+  <title>David Nascimento | Senior QA Engineer / SDET</title>
+  <meta name="description" content="David Nascimento, Senior QA Engineer / SDET. Automação de testes para Web, Mobile e APIs integrada ao CI/CD, com experiência nos setores financeiro e de saúde.">
   <meta name="author" content="David Nascimento">
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="David Nascimento · QA Automation Engineer">
-  <meta property="og:description" content="Garantindo qualidade, confiabilidade e previsibilidade em aplicações Web e APIs através de automação de testes.">
-  
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="David Nascimento · QA Automation Engineer">
-  <meta name="twitter:description" content="Garantindo qualidade, confiabilidade e previsibilidade em aplicações Web e APIs através de automação de testes.">
-  
-  <title>David Nascimento · QA Automation Engineer</title>
+  <meta name="theme-color" content="#FAFAF8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#10171D" media="(prefers-color-scheme: dark)">
 
-  <link rel="stylesheet" href="css/style.css">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://david-nascimento.github.io/qa-automation-portfolio/">
+  <meta property="og:title" content="David Nascimento | Senior QA Engineer / SDET">
+  <meta property="og:description" content="Automação de testes para Web, Mobile e APIs que roda no pipeline e dá ao time confiança para entregar.">
+  <meta property="og:image" content="https://david-nascimento.github.io/qa-automation-portfolio/img/david-nascimento.webp">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="David Nascimento | Senior QA Engineer / SDET">
+  <meta name="twitter:description" content="Automação de testes para Web, Mobile e APIs que roda no pipeline e dá ao time confiança para entregar.">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2314202B'/%3E%3Cpath d='M9 16.5l4.5 4.5L23 11.5' fill='none' stroke='%2347C08A' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,650;12..96,750&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
-  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+  <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
 
-  <!-- HERO -->
-  <header class="hero">
-    <div class="hero-content">
-
-      <div class="hero-badge">
-        <span class="tag">QA AUTOMATION ENGINEER</span>
-        <span class="tag secondary">E2E • WEB • MOBILE • API</span>
-      </div>
-
-      <h1 class="hero-title">
-        <span class="hero-name">David Nascimento</span>
-      </h1>
-
-      <p class="hero-description">
-        Engenheiro de Qualidade especializado em automação de testes Web, Mobile e APIs,
-        com foco em redução de riscos, feedback rápido e previsibilidade de entregas
-        através de frameworks escaláveis e integração contínua.
-      </p>
-
-      <div class="hero-info">
-        <div class="info-item">
-          <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-            <circle cx="12" cy="10" r="3"/>
-          </svg>
-          <span>Brasil • Remoto</span>
-        </div>
-
-        <div class="info-item">
-          <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-          </svg>
-          <span>Automação Web & API</span>
-        </div>
-
-        <div class="info-item">
-          <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"/>
-            <polyline points="12 6 12 12 16 14"/>
-          </svg>
-          <span>Frameworks & CI/CD</span>
-        </div>
-      </div>
-
-      <div class="hero-actions">
-        <a class="btn-primary"
-          href="https://github.com/David-Nascimento"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Visite meu perfil no GitHub (abre em nova aba)">
-          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
-          </svg>
-          GitHub
-        </a>
-
-        <a class="btn-secondary"
-          href="https://www.linkedin.com/in/david-nascimento26/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Visite meu perfil no LinkedIn (abre em nova aba)">
-          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-            <rect x="2" y="9" width="4" height="12"/>
-            <circle cx="4" cy="4" r="2"/>
-          </svg>
-          LinkedIn
-        </a>
-
-        <a class="btn-tertiary"
-          href="mailto:halison700@gmail.com"
-          aria-label="Envie um email">
-          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-            <polyline points="22,6 12,13 2,6"/>
-          </svg>
-          Contato
-        </a>
-      </div>
-
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a href="#topo" class="brand" aria-label="Início">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M5.5 12.5l4 4 9-9"/></svg>
+        </span>
+        David Nascimento
+      </a>
+      <nav aria-label="Seções">
+        <ul class="nav-links">
+          <li><a href="#experiencia">Experiência</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#stack">Stack</a></li>
+          <li><a href="#contato" class="nav-cta">Contato</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-  <main id="main-content" class="container">
+  <main id="conteudo">
 
-    <!-- STACK -->
-    <section aria-labelledby="stack-title" class="stack-section">
-      <h2 id="stack-title">Stack Técnica</h2>
-      <p class="stack-subtitle">
-        Tecnologias, ferramentas e práticas aplicadas para construir automações escaláveis,
-        confiáveis e integradas ao fluxo de entrega de software.
-      </p>
-
-      <div class="stack-grid">
-
-        <!-- LINGUAGENS -->
-        <div class="stack-card">
-          <div class="stack-card-header">
-            <div class="stack-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="16 18 22 12 16 6"/>
-                <polyline points="8 6 2 12 8 18"/>
-              </svg>
-            </div>
-            <h3 class="stack-card-title">Linguagens</h3>
+    <!-- HERO -->
+    <section class="hero" id="topo">
+      <div class="wrap hero-grid">
+        <div class="hero-text">
+          <p class="hero-role">Senior QA Engineer / SDET</p>
+          <div class="hero-id">
+            <img class="hero-photo" src="img/david-nascimento.webp" alt="Foto de David Nascimento" width="320" height="320">
+            <h1>David Nascimento</h1>
           </div>
-          <div class="stack-badges">
-            <span class="stack-badge">Ruby</span>
-            <span class="stack-badge">Java</span>
-            <span class="stack-badge">JavaScript</span>
-            <span class="stack-badge">Python</span>
-          </div>
-          <p class="stack-note">
-            Utilizadas para automação de testes, criação de frameworks e validações de APIs.
+          <p class="hero-lede">
+            Construo automação de testes para Web, Mobile e APIs que roda no pipeline
+            e dá ao time confiança para entregar. Hoje atuo em um projeto de alta
+            criticidade no setor financeiro.
           </p>
+          <ul class="hero-facts">
+            <li>Brasil, trabalho remoto</li>
+            <li>Setores financeiro e de saúde</li>
+            <li>Ruby, Java, JavaScript e Python</li>
+          </ul>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="mailto:halison700@gmail.com">Fale comigo</a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/david-nascimento26/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="btn btn-ghost" href="https://github.com/David-Nascimento" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
         </div>
 
-        <!-- AUTOMAÇÃO -->
-        <div class="stack-card">
-          <div class="stack-card-header">
-            <div class="stack-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="3" y="3" width="18" height="18" rx="2"/>
-                <line x1="9" y1="3" x2="9" y2="21"/>
-              </svg>
-            </div>
-            <h3 class="stack-card-title">Automação de Testes</h3>
+        <figure class="run" aria-label="Resumo de competências apresentado como uma execução de testes">
+          <div class="run-head">
+            <span class="run-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="run-file">david_nascimento_spec.rb</span>
           </div>
-          <div class="stack-badges">
-            <span class="stack-badge">RSpec</span>
-            <span class="stack-badge">Capybara</span>
-            <span class="stack-badge">Cypress</span>
-            <span class="stack-badge">Selenium</span>
-            <span class="stack-badge">Karate</span>
-            <span class="stack-badge">Newman</span>
-            <span class="stack-badge">Cucumber (BDD)</span>
+          <div class="run-body">
+            <p class="run-cmd"><span aria-hidden="true">$</span> bundle exec rspec</p>
+            <p class="run-describe">Senior QA Engineer</p>
+            <ol class="run-cases">
+              <li>automatiza apps Android e iOS com Appium</li>
+              <li>valida APIs REST e contratos com Karate DSL</li>
+              <li>protege fluxos financeiros críticos</li>
+              <li>roda em paralelo no CI e no BrowserStack</li>
+              <li>escreve cenários BDD que o negócio entende</li>
+            </ol>
+            <p class="run-summary"><strong>5 examples, 0 failures</strong></p>
           </div>
-          <p class="stack-note">
-            Testes E2E, regressão automatizada, cenários BDD e validações funcionais contínuas.
-          </p>
-        </div>
-
-        <!-- APIs & INTEGRAÇÕES -->
-        <div class="stack-card">
-          <div class="stack-card-header">
-            <div class="stack-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-              </svg>
-            </div>
-            <h3 class="stack-card-title">APIs & Integrações</h3>
-          </div>
-          <div class="stack-badges">
-            <span class="stack-badge">REST API</span>
-            <span class="stack-badge">RabbitMQ</span>
-            <span class="stack-badge">Postman</span>
-            <span class="stack-badge">Insomnia</span>
-            <span class="stack-badge">HTTParty</span>
-            <span class="stack-badge">Testes de Contrato</span>
-          </div>
-          <p class="stack-note">
-            Validação de contratos, fluxos assíncronos e integridade entre serviços.
-          </p>
-        </div>
-
-        <!-- CI/CD -->
-        <div class="stack-card">
-          <div class="stack-card-header">
-            <div class="stack-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"/>
-                <polyline points="12 6 12 12 16 14"/>
-              </svg>
-            </div>
-            <h3 class="stack-card-title">CI/CD & DevOps</h3>
-          </div>
-          <div class="stack-badges">
-            <span class="stack-badge">GitHub Actions</span>
-            <span class="stack-badge">Jenkins</span>
-            <span class="stack-badge">GitLab CI</span>
-            <span class="stack-badge">Docker</span>
-            <span class="stack-badge">Pipelines de Testes</span>
-          </div>
-          <p class="stack-note">
-            Execução automatizada de testes integrada ao fluxo de entrega contínua.
-          </p>
-        </div>
-
-        <!-- BOAS PRÁTICAS -->
-        <div class="stack-card">
-          <div class="stack-card-header">
-            <div class="stack-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 11l3 3L22 4"/>
-              </svg>
-            </div>
-            <h3 class="stack-card-title">Boas Práticas & Qualidade</h3>
-          </div>
-          <div class="stack-badges">
-            <span class="stack-badge">BDD</span>
-            <span class="stack-badge">TDD</span>
-            <span class="stack-badge">Page Object</span>
-            <span class="stack-badge">Test Data Management</span>
-            <span class="stack-badge">Estratégia de Testes</span>
-          </div>
-          <p class="stack-note">
-            Foco em manutenibilidade, clareza de testes e redução de riscos em produção.
-          </p>
-        </div>
-
-        <!-- MONITORAMENTO -->
-        <div class="stack-card">
-          <div class="stack-card-header">
-            <div class="stack-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="3" y="3" width="18" height="18" rx="3"/>
-                <polyline points="6 14 9 11 12 13 15 8 18 10"/>
-              </svg>
-            </div>
-            <h3 class="stack-card-title">Monitoramento & Performance</h3>
-          </div>
-          <div class="stack-badges">
-            <span class="stack-badge">Datadog</span>
-            <span class="stack-badge">Kibana</span>
-            <span class="stack-badge">Elasticsearch</span>
-            <span class="stack-badge">JMeter</span>
-            <span class="stack-badge">k6</span>
-          </div>
-          <p class="stack-note">
-            Observabilidade, análise de falhas e testes de carga e performance.
-          </p>
-        </div>
-
+        </figure>
       </div>
     </section>
 
-
-
-    <!-- VALUE -->
-    <section class="value" aria-labelledby="value-title">
-      <h2 id="value-title">O que eu entrego</h2>
-      <p class="value-subtitle">
-        Automação de testes orientada a risco, impacto e previsibilidade de entregas
-      </p>
-
-      
-      <div class="value-grid">
-        <div class="value-card">
-          <div class="value-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M9 12l2 2 4-4"/>
-              <path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"/>
-              <path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"/>
-              <path d="M12 21c0-1-1-3-3-3s-3 2-3 3 1 3 3 3 3-2 3-3"/>
-              <path d="M12 3c0 1-1 3-3 3s-3-2-3-3 1-3 3-3 3 2 3 3"/>
-            </svg>
-          </div>
-          <h3>Automação Confiável</h3>
-          <p>
-            Construção de frameworks de automação estáveis, escaláveis e fáceis de manter,
-            integrados ao CI/CD e alinhados ao fluxo real de desenvolvimento.
-          </p>
-          <ul class="value-features">
-            <li>Frameworks reutilizáveis e versionáveis</li>
-            <li>Execução automática em pipelines</li>
-            <li>Redução de flakiness e custo de manutenção</li>
-          </ul>
+    <!-- EXPERIÊNCIA -->
+    <section class="section" id="experiencia" aria-labelledby="exp-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="exp-title">Experiência</h2>
+          <p>Do teste manual à engenharia de qualidade em projetos de alta criticidade.</p>
         </div>
 
-        <div class="value-card">
-          <div class="value-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="10"/>
-              <path d="M12 6v6l4 2"/>
-            </svg>
-          </div>
-          <h3>Qualidade Contínua</h3>
-          <p>
-            Feedback rápido e confiável para o time, permitindo detectar falhas cedo,
-            reduzir retrabalho e aumentar a confiança nos releases.
-          </p>
-          <ul class="value-features">
-            <li>Detecção precoce de falhas</li>
-            <li>Menos bugs em produção</li>
-            <li>Ciclos de entrega mais previsíveis</li>
-          </ul>
-        </div>
+        <ol class="jobs">
+          <li class="job job-current">
+            <div class="job-where">
+              <p class="job-company">Datum</p>
+              <p class="job-context">Projeto financeiro</p>
+              <p class="job-period">fev 2026 – atual</p>
+              <span class="job-now">Atual</span>
+            </div>
+            <div class="job-what">
+              <h3>Senior QA Engineer</h3>
+              <p>
+                Sigo no mesmo projeto do setor financeiro, agora pela Datum, mantendo e
+                evoluindo a automação de testes de aplicativos Mobile, APIs e integrações
+                críticas.
+              </p>
+              <ul>
+                <li>Evolução das suítes Mobile para Android e iOS com Appium</li>
+                <li>Automação de APIs REST com Karate DSL</li>
+                <li>Validação de fluxos financeiros críticos de ponta a ponta</li>
+                <li>Execução paralela no CI e em nuvem com BrowserStack</li>
+              </ul>
+              <p class="job-tools">Appium, Karate DSL, Java, SQL, BrowserStack, CI/CD</p>
+            </div>
+          </li>
 
-        <div class="value-card">
-          <div class="value-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-              <path d="M2 17l10 5 10-5"/>
-              <path d="M2 12l10 5 10-5"/>
-            </svg>
-          </div>
-          <h3>Visão de Negócio</h3>
-          <p>
-            Estratégia de testes baseada em risco, priorizando fluxos críticos
-            e comportamentos reais do usuário para maximizar o retorno da automação.
-          </p>
-          <ul class="value-features">
-            <li>Priorização por impacto no negócio</li>
-            <li>Cenários alinhados ao uso real</li>
-            <li>Métricas claras de valor entregue</li>
-          </ul>
-        </div>
+          <li class="job">
+            <div class="job-where">
+              <p class="job-company">Keeggo</p>
+              <p class="job-context">Projeto financeiro</p>
+              <p class="job-period">nov 2021 – fev 2026 <span class="job-dur">4 anos e 4 meses</span></p>
+            </div>
+            <div class="job-what">
+              <h3>Senior QA Engineer / SDET</h3>
+              <p>
+                Responsável pela automação de testes de ponta a ponta em um projeto de alta
+                criticidade do setor financeiro, cobrindo aplicativos Mobile, APIs e
+                integrações complexas entre serviços.
+              </p>
+              <ul>
+                <li>Automação Mobile para Android e iOS com Appium</li>
+                <li>Automação de APIs REST com Karate DSL</li>
+                <li>Validação de fluxos financeiros críticos de ponta a ponta</li>
+                <li>Execução em nuvem com BrowserStack e paralelismo no CI</li>
+              </ul>
+              <p class="job-tools">Appium, Karate DSL, BrowserStack, CI/CD</p>
+            </div>
+          </li>
+
+          <li class="job">
+            <div class="job-where">
+              <p class="job-company">TALLOS</p>
+            </div>
+            <div class="job-what">
+              <h3>QA Automation Engineer</h3>
+              <p>
+                Automação de testes Web e de APIs, com participação ativa na definição
+                dos cenários críticos e na integração dos testes ao pipeline.
+              </p>
+              <ul>
+                <li>Automação de testes Web e de APIs</li>
+                <li>Cenários BDD com Cucumber</li>
+                <li>Testes de integração entre serviços</li>
+                <li>Execução contínua com Jenkins</li>
+              </ul>
+              <p class="job-tools">Cucumber, Jenkins, Testes de API, BDD</p>
+            </div>
+          </li>
+
+          <li class="job">
+            <div class="job-where">
+              <p class="job-company">Hapvida</p>
+              <p class="job-context">Saúde</p>
+            </div>
+            <div class="job-what">
+              <h3>QA Analyst</h3>
+              <p>
+                Testes funcionais e de regressão em sistemas hospitalares críticos, com foco
+                em estabilidade, confiabilidade e aderência a requisitos regulatórios.
+              </p>
+              <ul>
+                <li>Testes funcionais e de regressão</li>
+                <li>Homologação de sistemas hospitalares</li>
+                <li>Validação de regras de negócio</li>
+                <li>Documentação e evidências de teste</li>
+              </ul>
+              <p class="job-tools">Testes funcionais, Regressão, Homologação</p>
+            </div>
+          </li>
+
+          <li class="job">
+            <div class="job-where">
+              <p class="job-company">Início de carreira</p>
+              <p class="job-context">Base em qualidade de software</p>
+            </div>
+            <div class="job-what">
+              <h3>QA Analyst / Homologador</h3>
+              <p>
+                Testes manuais, escrita de casos e cenários de teste e suporte direto aos
+                times de desenvolvimento, aprendendo o ciclo de vida do software na prática.
+              </p>
+              <p class="job-tools">Testes manuais, Casos de teste, SDLC, Métodos ágeis</p>
+            </div>
+          </li>
+        </ol>
       </div>
     </section>
-
-    <section class="projects-section" aria-labelledby="projects-title">
-
-      <!-- CASE PRINCIPAL -->
-      <section class="case-main reveal" aria-labelledby="case-title">
-        <span class="case-label">CASE PRINCIPAL</span>
-
-        <h2 id="case-title">DataSeed — Geração e Seed de Dados para Testes</h2>
-
-        <p class="case-intro">
-          Aplicação web desenvolvida para criação e gerenciamento de dados de teste,
-          com foco em apoiar estratégias de qualidade, automação e testes em ambientes reais.
-        </p>
-
-        <!-- LINKS DO CASE -->
-        <div class="case-links">
-          <a href="https://dataseed.onrender.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="case-link primary">
-            🌐 Aplicação Online
-          </a>
-
-          <a href="https://github.com/David-Nascimento/dataseed"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="case-link secondary">
-            💻 Código no GitHub
-          </a>
-        </div>
-
-        <div class="case-steps">
-
-          <!-- PROBLEMA -->
-          <div class="case-step">
-            <h3>📌 Problema</h3>
-            <p>
-              Times de QA e desenvolvimento enfrentam dificuldades na criação e manutenção
-              de dados de teste confiáveis, resultando em cenários frágeis, testes inconsistentes
-              e dependência excessiva de ambientes instáveis.
-            </p>
-          </div>
-
-          <!-- SOLUÇÃO -->
-          <div class="case-step">
-            <h3>🛠️ Solução</h3>
-            <p>
-              Desenvolvimento do <strong>DataSeed</strong>, uma aplicação web que centraliza
-              a geração e o seed de dados de teste, permitindo criação rápida, reutilização
-              e consistência entre testes manuais e automatizados.
-            </p>
-            <ul>
-              <li>Arquitetura simples e objetiva</li>
-              <li>Interface web para gestão de dados</li>
-              <li>Base preparada para integração com automação e APIs</li>
-            </ul>
-          </div>
-
-          <!-- IMPACTO -->
-          <div class="case-step">
-            <h3>🚀 Impacto</h3>
-            <ul>
-              <li>✔ Redução de dependência de dados instáveis</li>
-              <li>✔ Aumento da confiabilidade dos testes</li>
-              <li>✔ Suporte direto a estratégias de automação</li>
-              <li>✔ Aplicação funcional publicada em produção</li>
-            </ul>
-          </div>
-
-        </div>
-      </section>
 
     <!-- PROJETOS -->
-    <section class="value-title" aria-labelledby="value-title">
-      <h2 id="value-title">Projetos de Automação de Testes</h2>
-      <p class="value-subtitle">
-        Projetos focados exclusivamente em automação de testes, cobrindo aplicações Web,
-        APIs e Performance, aplicando boas práticas de QA e integração com CI/CD.
-      </p>
+    <section class="section section-alt" id="projetos" aria-labelledby="proj-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="proj-title">Projetos</h2>
+          <p>Ferramentas que construí e publiquei para apoiar testes e o aprendizado de QA.</p>
+        </div>
 
-      <div class="projects-grid">
-
-        <!-- Automação Web -->
-        <article class="project-card reveal">
-          <h3>Automação Web E2E</h3>
-          <p>
-            Suite de testes automatizados para aplicações web, cobrindo fluxos críticos
-            de negócio com execução contínua em pipelines de CI/CD.
-          </p>
-
-          <div class="project-tags">
-            <span>Ruby</span>
-            <span>Capybara</span>
-            <span>RSpec</span>
-            <span>E2E</span>
+        <article class="case">
+          <header class="case-head">
+            <div>
+              <h3>DataSeed</h3>
+              <p class="case-sub">Geração e seed de dados para testes</p>
+            </div>
+            <div class="case-links">
+              <a href="https://dataseed.onrender.com/" target="_blank" rel="noopener noreferrer">Abrir aplicação</a>
+              <a href="https://github.com/David-Nascimento/dataseed" target="_blank" rel="noopener noreferrer">Ver código</a>
+            </div>
+          </header>
+          <div class="case-cols">
+            <div>
+              <h4>Problema</h4>
+              <p>Dados de teste instáveis e inconsistentes deixavam os cenários frágeis e dependentes do estado de cada ambiente.</p>
+            </div>
+            <div>
+              <h4>Solução</h4>
+              <p>Aplicação web que centraliza a criação e o seed de dados de teste, com interface de gestão e integração com automações e APIs.</p>
+            </div>
+            <div>
+              <h4>Resultado</h4>
+              <p>Testes menos dependentes de dados instáveis e mais confiáveis. Aplicação publicada e em uso.</p>
+            </div>
           </div>
-
-          <a class="project-link"
-            href="https://github.com/David-Nascimento"
-            target="_blank">
-            Ver no GitHub
-          </a>
         </article>
 
-        <!-- Automação API -->
-        <article class="project-card reveal">
-          <h3>Automação de APIs</h3>
-          <p>
-            Framework de automação de testes de APIs REST com foco em validação de contratos,
-            regressão automatizada e feedback rápido para o time.
-          </p>
-
-          <div class="project-tags">
-            <span>Ruby</span>
-            <span>HTTParty</span>
-            <span>API Testing</span>
-            <span>REST</span>
+        <article class="case">
+          <header class="case-head">
+            <div>
+              <h3>QA Playground</h3>
+              <p class="case-sub">Plataforma em português para praticar QA</p>
+            </div>
+            <div class="case-links">
+              <a href="https://qa-playground-azure.vercel.app/index.html" target="_blank" rel="noopener noreferrer">Abrir aplicação</a>
+              <a href="https://github.com/David-Nascimento/QA-Playground" target="_blank" rel="noopener noreferrer">Ver código</a>
+            </div>
+          </header>
+          <div class="case-cols">
+            <div>
+              <h4>Problema</h4>
+              <p>Quem estuda QA encontra aplicações de demonstração instáveis ou irreais, e projetos reais complexos demais para começar.</p>
+            </div>
+            <div>
+              <h4>Solução</h4>
+              <p>Ambiente estável com desafios por nível (júnior, pleno e sênior) para testes manuais, automação Web, Mobile, APIs e BDD. Feito com TypeScript, SCSS e API mockada.</p>
+            </div>
+            <div>
+              <h4>Resultado</h4>
+              <p>Plataforma gratuita e open source, disponível para qualquer pessoa praticar QA em português.</p>
+            </div>
           </div>
-
-          <a class="project-link"
-            href="https://github.com/David-Nascimento"
-            target="_blank">
-            Ver no GitHub
-          </a>
         </article>
 
-        <!-- Karate -->
-        <article class="project-card reveal">
-          <h3>Automação de APIs com Karate</h3>
-          <p>
-            Automação de serviços REST utilizando Karate Framework,
-            aplicando BDD, validação de contratos e execução automatizada.
-          </p>
-
-          <div class="project-tags">
-            <span>Karate</span>
-            <span>BDD</span>
-            <span>API</span>
-            <span>CI/CD</span>
-          </div>
-
-          <a class="project-link"
-            href="https://github.com/David-Nascimento"
-            target="_blank">
-            Ver no GitHub
-          </a>
-        </article>
-
-        <!-- Performance -->
-        <article class="project-card reveal">
-          <h3>Testes de Performance</h3>
-          <p>
-            Implementação de testes de carga e stress para validar performance,
-            estabilidade e limites de aplicações críticas.
-          </p>
-
-          <div class="project-tags">
-            <span>k6</span>
-            <span>JMeter</span>
-            <span>Performance</span>
-            <span>Load Test</span>
-          </div>
-
-          <a class="project-link"
-            href="https://github.com/David-Nascimento"
-            target="_blank">
-            Ver no GitHub
-          </a>
-        </article>
-
+        <h3 class="sub-title">Automação de testes</h3>
+        <ul class="repos">
+          <li class="repo">
+            <div class="repo-main">
+              <h4>Automação Web E2E</h4>
+              <p>Suíte de testes de ponta a ponta cobrindo fluxos críticos de negócio, executada continuamente no pipeline.</p>
+            </div>
+            <p class="repo-tags">Ruby, Capybara, RSpec</p>
+            <a class="repo-link" href="https://github.com/David-Nascimento" target="_blank" rel="noopener noreferrer" aria-label="Ver Automação Web E2E no GitHub">GitHub</a>
+          </li>
+          <li class="repo">
+            <div class="repo-main">
+              <h4>Automação de APIs REST</h4>
+              <p>Framework de testes de API com validação de contratos e regressão automatizada para feedback rápido.</p>
+            </div>
+            <p class="repo-tags">Ruby, HTTParty, RSpec</p>
+            <a class="repo-link" href="https://github.com/David-Nascimento" target="_blank" rel="noopener noreferrer" aria-label="Ver Automação de APIs REST no GitHub">GitHub</a>
+          </li>
+          <li class="repo">
+            <div class="repo-main">
+              <h4>APIs com Karate</h4>
+              <p>Testes de serviços REST escritos em BDD, com validação de contratos e execução no CI.</p>
+            </div>
+            <p class="repo-tags">Karate, BDD, CI/CD</p>
+            <a class="repo-link" href="https://github.com/David-Nascimento" target="_blank" rel="noopener noreferrer" aria-label="Ver APIs com Karate no GitHub">GitHub</a>
+          </li>
+          <li class="repo">
+            <div class="repo-main">
+              <h4>Testes de performance</h4>
+              <p>Testes de carga e stress para medir desempenho, estabilidade e limites de aplicações críticas.</p>
+            </div>
+            <p class="repo-tags">k6, JMeter</p>
+            <a class="repo-link" href="https://github.com/David-Nascimento" target="_blank" rel="noopener noreferrer" aria-label="Ver Testes de performance no GitHub">GitHub</a>
+          </li>
+        </ul>
       </div>
     </section>
 
+    <!-- STACK -->
+    <section class="section" id="stack" aria-labelledby="stack-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="stack-title">Stack</h2>
+          <p>Ferramentas que uso no dia a dia para testar, integrar e observar.</p>
+        </div>
+        <dl class="stack">
+          <div>
+            <dt>Linguagens</dt>
+            <dd>Ruby, Java, JavaScript, Python</dd>
+          </div>
+          <div>
+            <dt>Web e Mobile</dt>
+            <dd>Appium, Cypress, Selenium, Capybara, RSpec, Cucumber</dd>
+          </div>
+          <div>
+            <dt>APIs e integrações</dt>
+            <dd>Karate DSL, HTTParty, Postman, Newman, Insomnia, RabbitMQ, testes de contrato</dd>
+          </div>
+          <div>
+            <dt>CI/CD e nuvem</dt>
+            <dd>GitHub Actions, Jenkins, GitLab CI, Docker, BrowserStack</dd>
+          </div>
+          <div>
+            <dt>Performance e observabilidade</dt>
+            <dd>k6, JMeter, Datadog, Kibana, Elasticsearch</dd>
+          </div>
+          <div>
+            <dt>Práticas</dt>
+            <dd>BDD, TDD, Page Objects, gestão de dados de teste, estratégia de testes baseada em risco</dd>
+          </div>
+        </dl>
 
-
-    <!-- TIMELINE -->
-    <section class="timeline reveal" aria-labelledby="timeline-title">
-      <h2 id="timeline-title">Minha Jornada Profissional</h2>
-      <p class="timeline-subtitle">
-        Evolução prática em qualidade de software, automação de testes e engenharia de qualidade
-      </p>
-
-      <div class="timeline-container">
-        <div class="timeline-line"></div>
-
-        <!-- ATUAL -->
-        <div class="timeline-item">
-          <div class="timeline-marker">
-            <div class="marker-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 11l3 3L22 4"/>
-                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
-              </svg>
+        <div class="principles">
+          <h3 class="sub-title">Como trabalho</h3>
+          <div class="principles-grid">
+            <div>
+              <h4>Automação em que o time confia</h4>
+              <p>Frameworks estáveis e reutilizáveis, rodando no pipeline, com flakiness sob controle e manutenção barata.</p>
+            </div>
+            <div>
+              <h4>Feedback antes do release</h4>
+              <p>Falhas detectadas cedo, menos retrabalho e ciclos de entrega mais previsíveis.</p>
+            </div>
+            <div>
+              <h4>Prioridade pelo risco</h4>
+              <p>Primeiro os fluxos críticos e o comportamento real do usuário, onde a automação traz mais retorno.</p>
             </div>
           </div>
-
-          <div class="timeline-content">
-            <div class="timeline-badge">Atual</div>
-            <h3>Senior QA Engineer / SDET</h3>
-            <p class="timeline-period">Keeggo • Projeto Financeiro</p>
-
-            <p class="timeline-description">
-              Atuação como QA Engineer / SDET em projeto de alta criticidade no setor financeiro,
-              com foco em automação de testes para aplicações Mobile, APIs e integrações complexas.
-            </p>
-
-            <ul class="timeline-skills">
-              <li>Automação Mobile (Android & iOS) com Appium</li>
-              <li>Automação de APIs REST com Karate DSL</li>
-              <li>Validação de fluxos financeiros críticos</li>
-              <li>Execução em nuvem (BrowserStack)</li>
-              <li>CI e paralelismo de testes</li>
-            </ul>
-          </div>
         </div>
+      </div>
+    </section>
 
-        <!-- TALLOS -->
-        <div class="timeline-item">
-          <div class="timeline-marker">
-            <div class="marker-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                <path d="M2 17l10 5 10-5"/>
-                <path d="M2 12l10 5 10-5"/>
-              </svg>
-            </div>
-          </div>
-
-          <div class="timeline-content">
-            <div class="timeline-badge">Experiência</div>
-            <h3>QA Automation Engineer</h3>
-            <p class="timeline-period">TALLOS</p>
-
-            <p class="timeline-description">
-              Atuação focada em automação de testes e qualidade de software,
-              com participação ativa na definição de cenários críticos,
-              testes de APIs e integração contínua em pipelines.
-            </p>
-
-            <ul class="timeline-skills">
-              <li>Automação de testes Web e API</li>
-              <li>BDD com Cucumber</li>
-              <li>Testes de integração</li>
-              <li>CI com Jenkins</li>
-            </ul>
-          </div>
+    <!-- CONTATO -->
+    <section class="contact" id="contato" aria-labelledby="contact-title">
+      <div class="wrap contact-inner">
+        <h2 id="contact-title">Vamos conversar sobre qualidade no seu time?</h2>
+        <p>Estou aberto a oportunidades e conversas sobre automação de testes e engenharia de qualidade.</p>
+        <a class="contact-mail" href="mailto:halison700@gmail.com">halison700@gmail.com</a>
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/in/david-nascimento26/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://github.com/David-Nascimento" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
-
-        <!-- HAPVIDA -->
-        <div class="timeline-item">
-          <div class="timeline-marker">
-            <div class="marker-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                <path d="M2 17l10 5 10-5"/>
-                <path d="M2 12l10 5 10-5"/>
-              </svg>
-            </div>
-          </div>
-
-          <div class="timeline-content">
-            <div class="timeline-badge">Experiência</div>
-            <h3>QA Analyst</h3>
-            <p class="timeline-period">Hapvida • Saúde</p>
-
-            <p class="timeline-description">
-              Atuação em projetos da área da saúde, realizando testes funcionais
-              e de regressão em sistemas críticos, com foco em estabilidade,
-              confiabilidade e aderência a requisitos regulatórios.
-            </p>
-
-            <ul class="timeline-skills">
-              <li>Testes funcionais e regressão</li>
-              <li>Homologação de sistemas hospitalares</li>
-              <li>Validação de regras de negócio</li>
-              <li>Documentação e evidências de teste</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- INÍCIO -->
-        <div class="timeline-item">
-          <div class="timeline-marker">
-            <div class="marker-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-              </svg>
-            </div>
-          </div>
-
-          <div class="timeline-content">
-            <div class="timeline-badge">Início</div>
-            <h3>QA Analyst / Homologador</h3>
-            <p class="timeline-period">Base em Qualidade de Software</p>
-
-            <p class="timeline-description">
-              Início da carreira em QA com foco em testes manuais,
-              compreensão do ciclo de desenvolvimento de software
-              e suporte direto aos times de desenvolvimento.
-            </p>
-
-            <ul class="timeline-skills">
-              <li>Testes manuais</li>
-              <li>Casos e cenários de teste</li>
-              <li>SDLC</li>
-              <li>Metodologias ágeis</li>
-            </ul>
-          </div>
-        </div>
-
       </div>
     </section>
   </main>
-  
-  
-  <footer>
-    <p>© 2025 · David Nascimento · QA Automation Engineer</p>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p>© <span id="ano">2026</span> David Nascimento</p>
+    </div>
   </footer>
+
   <script src="js/script.js"></script>
 </body>
 </html>
