@@ -933,3 +933,28 @@ img, svg { display: block; }
   .hero-v2 h1 { font-size: 2.5rem; }
   .hero-v2 .run-head span:not(.dots) { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
 }
+
+/* ---------- layout amplo + tela inicial fixa ---------- */
+:root { --wrap: 1440px; --gutter: clamp(20px, 5vw, 72px); }
+.section { padding: clamp(80px, 11vw, 160px) 0; }
+.section-head { margin-bottom: clamp(48px, 6vw, 80px); gap: 32px; }
+.sub-title { margin: clamp(64px, 8vw, 104px) 0 28px; }
+.exp-grid { gap: clamp(32px, 6vw, 96px); }
+.pc-grid, .rl-grid { gap: clamp(20px, 2.4vw, 32px); }
+.tl-item { padding-bottom: 12px; }
+.how-block { margin-top: clamp(64px, 8vw, 112px); }
+.cta { padding: clamp(72px, 10vw, 128px) 0; }
+.footer { padding: 36px 0; }
+.section-head p, .how-lead, .tl-item p, .job-what > p { max-width: 52em; }
+
+/* a tela inicial fica parada e as seções deslizam por cima dela */
+main > .section, main > .cta { position: relative; z-index: 1; background: var(--paper); }
+main > .section-alt { background: var(--paper-alt); }
+.footer { position: relative; z-index: 1; background: var(--paper); }
+@media (min-width: 921px) and (min-height: 640px) {
+  .hero-v2 { position: sticky; top: 64px; z-index: 0; min-height: calc(100svh - 64px); }
+}
+.topbar { z-index: 50; }
+@media (min-width: 921px) and (min-height: 640px) {
+  #experiencia { box-shadow: 0 -24px 48px -24px rgba(0,0,0,.35); border-top: 0; }
+}
