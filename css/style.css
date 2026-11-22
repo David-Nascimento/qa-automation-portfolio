@@ -956,3 +956,5 @@ img, svg { display: block; }
 .spa .nav-links a[aria-current="page"] { color: var(--ink); background: var(--paper-alt); border-radius: 8px; }
 .topbar { z-index: 50; }
 @media (max-width: 920px), (max-height: 700px) { .spa[data-view="home"] .hero-v2 { overflow-y: auto; } }
+.spa, .spa body { scroll-behavior: auto !important; }
+.spa main > .section, .spa main > .cta { animation: none; transition: none; }

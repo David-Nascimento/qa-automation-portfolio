@@ -355,10 +355,10 @@ document.querySelectorAll('[data-tabs], [data-api]').forEach((box) => {
       var on = nav[i].getAttribute('href') === '#' + id;
       if (on) nav[i].setAttribute('aria-current', 'page'); else nav[i].removeAttribute('aria-current');
     }
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: 'instant' });
     if (sub) {
       var t = document.getElementById(sub);
-      if (t) setTimeout(function () { t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 60);
+      if (t) t.scrollIntoView({ behavior: 'instant', block: 'start' });
     }
   }
   function route() {
