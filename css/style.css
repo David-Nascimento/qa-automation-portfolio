@@ -360,3 +360,20 @@ img, svg { display: block; }
   display: inline-block; margin-bottom: 10px; padding: 2px 10px; border-radius: 99px;
   background: var(--pass-soft); color: var(--pass); font-size: .8125rem; font-weight: 600;
 }
+
+/* demo do projeto em destaque */
+.case-links a.demo-link { display: inline-flex; align-items: center; gap: 8px; background: var(--pass); border-color: var(--pass); color: var(--paper); }
+.case-links a.demo-link:hover { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+.live-dot { width: 8px; height: 8px; border-radius: 50%; background: currentColor; animation: live-pulse 1.6s ease-in-out infinite; }
+@keyframes live-pulse { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+.case-preview {
+  position: relative; display: block; margin-top: 24px; border: 1px solid var(--rule); border-radius: 10px; overflow: hidden;
+}
+.case-preview img { display: block; width: 100%; height: auto; transition: transform .3s ease; }
+.case-preview:hover img { transform: scale(1.015); }
+.case-preview-cta {
+  position: absolute; right: 14px; bottom: 14px; padding: 6px 14px; border-radius: 99px;
+  background: var(--ink); color: var(--paper); font-size: .875rem; font-weight: 600;
+}
+@media (max-width: 600px) { .case-preview { margin-top: 18px; } .case-preview-cta { right: 8px; bottom: 8px; padding: 4px 10px; font-size: .75rem; } }
+@media (prefers-reduced-motion: reduce) { .live-dot { animation: none; } .case-preview img { transition: none; } }
