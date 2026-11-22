@@ -67,7 +67,9 @@ document.querySelectorAll('[data-tabs], [data-api]').forEach((box) => {
   const hero = document.querySelector('.hero-v2');
   if (!hero) return;
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  requestAnimationFrame(() => requestAnimationFrame(() => hero.classList.add('ready')));
+  const go = () => hero.classList.add('ready');
+  requestAnimationFrame(() => requestAnimationFrame(go));
+  setTimeout(go, 120); // garante a entrada mesmo com a aba em segundo plano
 
   // contadores dos atalhos
   const counters = [...document.querySelectorAll('.ql .n')];
