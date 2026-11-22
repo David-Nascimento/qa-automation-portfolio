@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,650;12..96,750&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20261122">
+  <link rel="stylesheet" href="css/style.css?v=20261122b">
   <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
@@ -41,6 +41,7 @@
         <ul class="nav-links">
           <li><a href="#experiencia">Experiência</a></li>
           <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#como-testo">Como testo</a></li>
           <li><a href="#stack">Stack</a></li>
           <li><a href="#contato" class="nav-cta">Contato</a></li>
         </ul>
@@ -404,8 +405,176 @@
       </div>
     </section>
 
+    <!-- COMO EU TESTO -->
+    <section class="section" id="como-testo" aria-labelledby="how-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="how-title">Como eu testo</h2>
+          <p>O raciocínio por trás dos testes, com exemplos reais tirados dos meus repositórios.</p>
+        </div>
+
+        <!-- 01 ARTEFATOS -->
+        <div class="how-block">
+          <div class="how-label"><span class="how-num">01</span>Artefatos de QA</div>
+          <h3 class="how-title">Do requisito ao bug reportado.</h3>
+
+          <div class="tabs" data-tabs>
+            <div class="tab-list" role="tablist" aria-label="Artefatos de QA">
+              <button class="tab" role="tab" id="tab-caso" aria-controls="panel-caso" aria-selected="true">Caso de teste</button>
+              <button class="tab" role="tab" id="tab-bdd" aria-controls="panel-bdd" aria-selected="false" tabindex="-1">Cenário BDD</button>
+              <button class="tab" role="tab" id="tab-bug" aria-controls="panel-bug" aria-selected="false" tabindex="-1">Bug report</button>
+            </div>
+
+            <div class="tab-panel" role="tabpanel" id="panel-caso" aria-labelledby="tab-caso" tabindex="0">
+              <div class="art-head">
+                <div>
+                  <p class="art-id">CT005</p>
+                  <h4>Cadastro de novo usuário</h4>
+                </div>
+                <span class="art-chip">Funcional</span>
+              </div>
+              <dl class="art-meta">
+                <div><dt>Objetivo</dt><dd>Validar o fluxo de registro de novo usuário e as regras básicas de validação.</dd></div>
+                <div><dt>Pré-condição</dt><dd>Acesso à página de cadastro.</dd></div>
+              </dl>
+              <div class="table-scroll">
+                <table class="art-table">
+                  <thead><tr><th scope="col">#</th><th scope="col">Ação</th><th scope="col">Resultado esperado</th></tr></thead>
+                  <tbody>
+                    <tr><td>1</td><td>Acessar a página de cadastro</td><td>Formulário de cadastro é exibido</td></tr>
+                    <tr><td>2</td><td>Preencher nome, e-mail, senha e confirmação</td><td>Campos aceitam os valores e mostram validação em tempo real, quando houver</td></tr>
+                    <tr><td>3</td><td>Enviar o formulário com dados válidos</td><td>Conta é criada e a mensagem de sucesso aparece</td></tr>
+                    <tr><td>4</td><td>Tentar cadastrar com um e-mail já existente</td><td>Mensagem clara de e-mail já cadastrado e cadastro negado</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="art-source">Um dos 10 casos documentados para o practice.expandtesting.com. <a href="https://github.com/David-Nascimento/Testes-Funcionais-Cucumber-Capybara-/blob/main/docs/casos-de-teste-funcionais.md" target="_blank" rel="noopener noreferrer">Ver todos os casos ↗</a></p>
+            </div>
+
+            <div class="tab-panel" role="tabpanel" id="panel-bdd" aria-labelledby="tab-bdd" tabindex="0" hidden>
+              <div class="art-head">
+                <div>
+                  <p class="art-id">validacao_otp.feature</p>
+                  <h4>Validação de OTP por e-mail</h4>
+                </div>
+                <span class="art-chip">Cucumber + Capybara</span>
+              </div>
+              <p class="art-lead">O mesmo fluxo nos dois sentidos: o caminho feliz e o código errado, cada um com a mensagem que o usuário precisa ver.</p>
+<pre class="code"><code><span class="c-tag">@smoke @regression @otpEmail</span>
+<span class="c-kw">Scenario:</span> Validar OTP por Email
+  <span class="c-kw">Given</span> que estou na página de validacao OTP
+  <span class="c-kw">When</span> preencho o campo email com <span class="c-str">"teste@email.com"</span>
+  <span class="c-kw">Then</span> devo enviar o OTP por email
+  <span class="c-kw">And</span> preencher o campo OTP com <span class="c-str">"123456"</span>
+  <span class="c-kw">And</span> clicar no botão validar OTP por email
+  <span class="c-kw">Then</span> devo ver a mensagem OTP email <span class="c-str">"Código OTP validado com sucesso!"</span>
+
+<span class="c-tag">@smoke @regression @otpEmailInvalido</span>
+<span class="c-kw">Scenario:</span> Validar OTP por Email com OTP inválido
+  <span class="c-kw">Given</span> que estou na página de validacao OTP
+  <span class="c-kw">When</span> preencho o campo email com <span class="c-str">"teste@email.com"</span>
+  <span class="c-kw">Then</span> devo enviar o OTP por email
+  <span class="c-kw">And</span> preencher o campo OTP com <span class="c-str">"223344"</span>
+  <span class="c-kw">And</span> clicar no botão validar OTP por email
+  <span class="c-kw">Then</span> devo ver a mensagem OTP email <span class="c-str">"Código inválido. Use 123456 para testes."</span></code></pre>
+              <p class="art-source">Parte da suíte do QA Playground, com Page Object e relatórios no Allure. <a href="https://github.com/David-Nascimento/automacao-qa-playground/blob/main/features/validacao_otp.feature" target="_blank" rel="noopener noreferrer">Ver a feature ↗</a></p>
+            </div>
+
+            <div class="tab-panel" role="tabpanel" id="panel-bug" aria-labelledby="tab-bug" tabindex="0" hidden>
+              <div class="art-head">
+                <div>
+                  <p class="art-id">Acessibilidade · 19/11/2026</p>
+                  <h4>Imagem sem texto alternativo na tela de login do ServeRest</h4>
+                </div>
+                <span class="art-chip art-chip-fail">Crítico (axe)</span>
+              </div>
+              <dl class="art-meta">
+                <div><dt>Onde</dt><dd>front.serverest.dev/login, aplicação de terceiros.</dd></div>
+                <div><dt>Como foi achado</dt><dd>Cenário automatizado <code>@a11y</code> com axe-core (WCAG 2.1 A/AA), requisito <code>REQ-A11Y-004</code>.</dd></div>
+                <div><dt>Esperado</dt><dd>Nenhuma violação de nível crítico na tela de login.</dd></div>
+                <div><dt>Obtido</dt><dd>Regra <code>image-alt</code>: imagem sem texto alternativo, que o leitor de tela não consegue descrever. Também há <code>color-contrast</code> de nível sério.</dd></div>
+                <div><dt>Tratamento</dt><dd>Como o app não é nosso, a regra entrou no baseline com o motivo documentado. O teste continua protegendo a tela contra qualquer violação nova.</dd></div>
+              </dl>
+              <p class="art-source">Achado pelo Ruby E2E Framework. <a href="https://github.com/David-Nascimento/ruby-e2e-framework/blob/main/config/a11y_baseline.yml" target="_blank" rel="noopener noreferrer">Ver o baseline ↗</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 02 MÉTRICAS -->
+        <div class="how-block">
+          <div class="how-label"><span class="how-num">02</span>Métricas</div>
+          <h3 class="how-title">O que já está automatizado.</h3>
+
+          <ul class="stats">
+            <li><strong>105</strong><span>cenários automatizados de Web, API e Mobile</span></li>
+            <li><strong>6</strong><span>ferramentas: Selenium, Karate, Cypress, Appium, Robot e k6</span></li>
+            <li><strong>6</strong><span>projetos com pipeline de CI configurado</span></li>
+            <li><strong>4</strong><span>projetos que rodam em Docker</span></li>
+          </ul>
+
+          <div class="bars" role="img" aria-label="Cenários automatizados por projeto: Karate API Framework 33, Automação QA Playground 28, Ruby E2E Framework 18, Robot Framework 9, Testes de API com Cypress 8, Mobile Android 5, Cypress E2E 4.">
+            <p class="bars-title">Cenários por projeto</p>
+            <div class="bar"><span class="bar-name">Karate API Framework</span><span class="bar-track"><span class="bar-fill" style="--v:33"></span></span><span class="bar-val">33</span></div>
+            <div class="bar"><span class="bar-name">Automação QA Playground</span><span class="bar-track"><span class="bar-fill" style="--v:28"></span></span><span class="bar-val">28</span></div>
+            <div class="bar"><span class="bar-name">Ruby E2E Framework</span><span class="bar-track"><span class="bar-fill" style="--v:18"></span></span><span class="bar-val">18</span></div>
+            <div class="bar"><span class="bar-name">Robot Framework</span><span class="bar-track"><span class="bar-fill" style="--v:9"></span></span><span class="bar-val">9</span></div>
+            <div class="bar"><span class="bar-name">Testes de API com Cypress</span><span class="bar-track"><span class="bar-fill" style="--v:8"></span></span><span class="bar-val">8</span></div>
+            <div class="bar"><span class="bar-name">Mobile Android</span><span class="bar-track"><span class="bar-fill" style="--v:5"></span></span><span class="bar-val">5</span></div>
+            <div class="bar"><span class="bar-name">Cypress E2E</span><span class="bar-track"><span class="bar-fill" style="--v:4"></span></span><span class="bar-val">4</span></div>
+          </div>
+          <p class="how-note">Contagem feita nos repositórios públicos em novembro de 2026: cenários em Gherkin, testes do Cypress e casos do Robot. Mostra o que está escrito, não o resultado de execuções. Fora isso, há 7 scripts de carga no k6 e 12 testes unitários nas ferramentas.</p>
+        </div>
+
+        <!-- 03 API -->
+        <div class="how-block">
+          <div class="how-label"><span class="how-num">03</span>Teste de API</div>
+          <h3 class="how-title">Uma jornada de compra, passo a passo.</h3>
+          <p class="how-lead">Cenário <code>@e2e</code> do Karate API Framework contra a API pública ServeRest. Cada cenário cria os próprios dados e os remove no fim, então a suíte pode rodar em paralelo sem um teste atrapalhar o outro.</p>
+
+          <ol class="steps">
+            <li>
+              <div class="step-text"><h4>Administrador publica um produto</h4><p>Usuário criado com dados únicos, login para pegar o token e produto cadastrado com 10 unidades. Cada recurso entra na lista de limpeza.</p></div>
+<pre class="code"><code><span class="c-kw">*</span> <span class="c-kw">def</span> adm = <span class="c-kw">call</span> read(<span class="c-str">'classpath:common/usuarios/criar-usuario.feature'</span>)
+    { administrador: <span class="c-str">'true'</span> }
+<span class="c-kw">*</span> <span class="c-kw">def</span> produto = <span class="c-kw">call</span> read(<span class="c-str">'classpath:common/produtos/criar-produto.feature'</span>)
+    { token: <span class="c-str">'#(sessaoAdm.token)'</span>, quantidade: 10 }</code></pre>
+            </li>
+            <li>
+              <div class="step-text"><h4>Cliente monta o carrinho</h4><p>Um segundo usuário, sem perfil de administrador, reserva 3 unidades.</p></div>
+<pre class="code"><code><span class="c-kw">Given</span> path <span class="c-str">'carrinhos'</span>
+<span class="c-kw">And</span> header Authorization = sessaoCliente.token
+<span class="c-kw">And</span> request { produtos: [ { idProduto: <span class="c-str">'#(produto.id)'</span>, quantidade: 3 } ] }
+<span class="c-kw">When</span> method post
+<span class="c-kw">Then</span> status 201</code></pre>
+            </li>
+            <li>
+              <div class="step-text"><h4>O estoque reflete a reserva</h4><p>A regra de negócio vem antes do status: 10 menos 3 tem que dar 7.</p></div>
+<pre class="code"><code><span class="c-kw">Given</span> path <span class="c-str">'produtos'</span>, produto.id
+<span class="c-kw">When</span> method get
+<span class="c-kw">Then</span> status 200
+<span class="c-kw">And</span> <span class="c-kw">match</span> response.quantidade == 7</code></pre>
+            </li>
+            <li>
+              <div class="step-text"><h4>A compra concluída não devolve o estoque</h4><p>Depois de fechar o pedido, o estoque continua em 7. É aqui que um bug de "devolução indevida" apareceria.</p></div>
+<pre class="code"><code><span class="c-kw">Given</span> path <span class="c-str">'carrinhos'</span>, <span class="c-str">'concluir-compra'</span>
+<span class="c-kw">And</span> header Authorization = sessaoCliente.token
+<span class="c-kw">When</span> method delete
+<span class="c-kw">Then</span> status 200
+<span class="c-comment"># ...</span>
+<span class="c-kw">And</span> <span class="c-kw">match</span> response.quantidade == 7</code></pre>
+            </li>
+            <li>
+              <div class="step-text"><h4>Limpeza que não reprova o teste</h4><p>Ao final, o hook <code>afterScenario</code> remove o que foi criado. A remoção não confere status de propósito: falhar na limpeza não pode esconder o resultado do teste.</p></div>
+<pre class="code"><code><span class="c-kw">*</span> configure afterScenario = read(<span class="c-str">'classpath:common/limpeza/limpar.js'</span>)</code></pre>
+            </li>
+          </ol>
+          <p class="how-note">O projeto foi escrito e revisado com base na documentação do Karate e do ServeRest; a primeira execução completa da suíte ainda está pendente, como o README informa. <a href="https://github.com/David-Nascimento/karate-api-framework/blob/main/src/test/resources/features/e2e/jornada-de-compra.feature" target="_blank" rel="noopener noreferrer">Ver o cenário completo ↗</a></p>
+        </div>
+      </div>
+    </section>
+
     <!-- STACK -->
-    <section class="section" id="stack" aria-labelledby="stack-title">
+    <section class="section section-alt" id="stack" aria-labelledby="stack-title">
       <div class="wrap">
         <div class="section-head">
           <h2 id="stack-title">Stack</h2>
@@ -478,6 +647,6 @@
     </div>
   </footer>
 
-  <script src="js/script.js?v=20261122"></script>
+  <script src="js/script.js?v=20261122b"></script>
 </body>
 </html>
