@@ -29,8 +29,8 @@ if (run) {
   }
 }
 
-// Abas dos artefatos de QA (clique e setas do teclado)
-document.querySelectorAll('[data-tabs]').forEach((box) => {
+// Abas (artefatos de QA e etapas do teste de API): clique, setas do teclado e botões anterior/próxima
+document.querySelectorAll('[data-tabs], [data-api]').forEach((box) => {
   const tabs = [...box.querySelectorAll('[role="tab"]')];
   const select = (tab, focus) => {
     tabs.forEach((t) => {
@@ -40,14 +40,22 @@ document.querySelectorAll('[data-tabs]').forEach((box) => {
       document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
     });
     if (focus) tab.focus();
+    if (box.hasAttribute('data-api')) tab.scrollIntoView({ block: 'nearest', inline: 'nearest' });
   };
   tabs.forEach((tab, i) => {
     tab.addEventListener('click', () => select(tab));
     tab.addEventListener('keydown', (e) => {
-      const keys = { ArrowRight: i + 1, ArrowLeft: i - 1, Home: 0, End: tabs.length - 1 };
+      const keys = { ArrowRight: i + 1, ArrowDown: i + 1, ArrowLeft: i - 1, ArrowUp: i - 1, Home: 0, End: tabs.length - 1 };
       if (!(e.key in keys)) return;
       e.preventDefault();
       select(tabs[(keys[e.key] + tabs.length) % tabs.length], true);
     });
   });
+  box.querySelectorAll('.api-prev, .api-next').forEach((btn) => btn.addEventListener('click', () => {
+    const i = tabs.findIndex((t) => t.getAttribute('aria-selected') === 'true');
+    const next = tabs[i + (btn.classList.contains('api-next') ? 1 : -1)];
+    if (!next) return;
+    select(next);
+    document.getElementById(next.getAttribute('aria-controls')).focus({ preventScroll: true });
+  }));
 });

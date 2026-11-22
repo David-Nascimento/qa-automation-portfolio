@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard de qualidade | David Nascimento</title>
+  <meta name="description" content="Dashboard com dados reais dos repositórios públicos de automação de testes de David Nascimento: cenários por camada, por projeto, práticas e atividade.">
+  <meta name="author" content="David Nascimento">
+  <meta name="theme-color" content="#FAFAF8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#10171D" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2314202B'/%3E%3Cpath d='M9 16.5l4.5 4.5L23 11.5' fill='none' stroke='%2347C08A' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,650;12..96,750&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=20261122c">
+  <link rel="stylesheet" href="css/dashboard.css?v=20261122c">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+  <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
+
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a href="./" class="brand" aria-label="Voltar ao portfólio">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M5.5 12.5l4 4 9-9"/></svg>
+        </span>
+        David Nascimento
+      </a>
+      <nav aria-label="Navegação">
+        <ul class="nav-links">
+          <li><a href="./#como-testo">← Portfólio</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo" class="dash">
+    <div class="wrap">
+      <div class="dash-head">
+        <p class="how-label"><span class="how-num">QA</span>Dashboard de qualidade</p>
+        <h1>O que está automatizado, em números.</h1>
+        <p class="dash-lead">Dados reais, contados no código dos 12 repositórios públicos de automação em 22 de novembro de 2026. Passe o mouse nos gráficos e use os filtros para explorar.</p>
+      </div>
+
+      <ul class="dash-kpis" aria-label="Indicadores">
+        <li><strong>104</strong><span>cenários automatizados</span><em>Web, API, Mobile, acessibilidade e híbridos</em></li>
+        <li><strong>7</strong><span>scripts de carga</span><em>smoke, load, stress, spike e thresholds no k6</em></li>
+        <li><strong>12</strong><span>testes unitários</span><em>nas ferramentas e gems que publiquei</em></li>
+        <li><strong>6/12</strong><span>projetos com CI</span><em>GitHub Actions, Jenkins e GitLab CI</em></li>
+        <li><strong>4/12</strong><span>projetos em Docker</span><em>execução reproduzível, sem setup local</em></li>
+        <li><strong>376</strong><span>commits</span><em>de 2021 a 2026, todos de minha autoria</em></li>
+      </ul>
+
+      <div class="dash-grid">
+        <section class="dash-card" aria-labelledby="c-camada">
+          <h2 id="c-camada">Cenários por camada</h2>
+          <p class="dash-sub">Onde está a cobertura automatizada.</p>
+          <div class="donut-wrap">
+            <svg class="donut" id="donut" viewBox="0 0 120 120" role="img" aria-label="Cenários por camada: API 47, Web 41, Mobile 10, Acessibilidade 4, Híbrido 2."></svg>
+            <ul class="legend" id="legend"></ul>
+          </div>
+        </section>
+
+        <section class="dash-card" aria-labelledby="c-projeto">
+          <h2 id="c-projeto">Cenários por projeto</h2>
+          <p class="dash-sub">Testes escritos em cada repositório.</p>
+          <div class="hbars" id="hbars" role="img" aria-label="Cenários por projeto: Karate API Framework 29, Automação QA Playground 28, Ruby E2E Framework 18, Robot Framework 12, Testes de API com Cypress 8, Automação Mobile Android 5, Login E2E com Cypress 3, Cypress + Cucumber 1."></div>
+        </section>
+
+        <section class="dash-card dash-wide" aria-labelledby="c-tempo">
+          <h2 id="c-tempo">Commits por ano</h2>
+          <p class="dash-sub">Atividade nos repositórios de automação. Cada cor é um projeto.</p>
+          <div class="cols" id="cols" role="img" aria-label="Commits por ano: 2021, 74; 2022, 5; 2023, 40; 2024, 0; 2025, 241; 2026, 16."></div>
+          <p class="dash-foot" id="cols-detail">Passe o mouse ou toque em uma coluna para ver os projetos.</p>
+        </section>
+
+        <section class="dash-card dash-wide" aria-labelledby="c-regressao">
+          <h2 id="c-regressao">Perfis de execução do Ruby E2E Framework</h2>
+          <p class="dash-sub">Quantos cenários cada perfil seleciona pelas tags. Um Esquema do Cenário com 3 exemplos conta como 3 execuções.</p>
+          <div class="hbars" id="profiles" role="img" aria-label="Execuções por perfil: regression 20, ci 20, ui 14, api 6, smoke 5, a11y 4."></div>
+        </section>
+      </div>
+
+      <section class="dash-card dash-table-card" aria-labelledby="c-tabela">
+        <div class="dash-table-head">
+          <div>
+            <h2 id="c-tabela">Projetos e práticas</h2>
+            <p class="dash-sub">Clique nos títulos das colunas para ordenar.</p>
+          </div>
+          <div class="chips" role="group" aria-label="Filtrar por camada" id="chips">
+            <button type="button" class="chip" aria-pressed="true" data-f="all">Todos</button>
+            <button type="button" class="chip" aria-pressed="false" data-f="Web">Web</button>
+            <button type="button" class="chip" aria-pressed="false" data-f="API">API</button>
+            <button type="button" class="chip" aria-pressed="false" data-f="Mobile">Mobile</button>
+            <button type="button" class="chip" aria-pressed="false" data-f="Acessibilidade">Acessibilidade</button>
+            <button type="button" class="chip" aria-pressed="false" data-f="Performance">Performance</button>
+            <button type="button" class="chip" aria-pressed="false" data-f="Ferramenta">Ferramentas</button>
+          </div>
+        </div>
+        <div class="table-scroll">
+          <table class="dash-table" id="table">
+            <thead>
+              <tr>
+                <th scope="col"><button type="button" data-k="nome">Projeto</button></th>
+                <th scope="col"><button type="button" data-k="ferramenta">Ferramenta</button></th>
+                <th scope="col">Camadas</th>
+                <th scope="col" class="num"><button type="button" data-k="testes">Testes</button></th>
+                <th scope="col">CI</th>
+                <th scope="col">Docker</th>
+                <th scope="col">Relatório</th>
+                <th scope="col"><button type="button" data-k="ultimo">Última atualização</button></th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <p class="dash-foot" id="table-count"></p>
+      </section>
+
+      <section class="dash-method" aria-labelledby="c-metodo">
+        <h2 id="c-metodo">Como os números foram contados</h2>
+        <ul>
+          <li><strong>Cenários:</strong> blocos <code>Scenario</code>/<code>Cenário</code> nos arquivos Gherkin, testes <code>it()</code> do Cypress e casos de teste do Robot Framework nas pastas <code>tests/</code>. Features auxiliares do Karate marcadas com <code>@ignore</code> não entram.</li>
+          <li><strong>Testes escritos, não execuções:</strong> o painel mostra o que existe no código. Ele não mostra taxa de sucesso.</li>
+          <li><strong>CI configurado não é CI verde:</strong> no Ruby E2E Framework o pipeline está pausado (só disparo manual), a suíte do Karate API Framework ainda não teve a primeira execução completa, e o workflow do BDD GenerationX cuida de versionamento.</li>
+          <li><strong>Commits:</strong> histórico completo de cada repositório, contado por ano.</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p>© <span id="ano">2026</span> David Nascimento · <a href="./">Voltar ao portfólio</a></p>
+    </div>
+  </footer>
+
+  <script src="js/dashboard.js?v=20261122c"></script>
+</body>
+</html>
