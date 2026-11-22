@@ -58,7 +58,6 @@
 .col-val { font-family: var(--f-mono); font-size: .8125rem; font-weight: 500; }
 .col-year { position: absolute; bottom: -26px; font-size: .8125rem; color: var(--muted); }
 .col:focus-visible { outline: 2px solid var(--pass); outline-offset: 4px; border-radius: 6px; }
-#c-tempo ~ .dash-foot { margin-top: 36px; }
 
 /* tabela */
 .dash-table-card { margin-top: 16px; }
@@ -106,3 +105,43 @@
   .cols { height: 180px; }
 }
 @media (prefers-reduced-motion: reduce) { .donut .seg, .legend li, .col { transition: none; } }
+
+/* painel de evolução (janela de tempo) */
+.tw { margin-top: 32px; background: var(--surface); border: 1px solid var(--rule); border-radius: 16px; padding: clamp(18px, 3vw, 28px); }
+.tw-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap; }
+.tw-top h2 { font-size: 1.25rem; font-weight: 650; letter-spacing: -0.015em; }
+.tw-badge { padding: 6px 12px; border: 1px solid var(--rule); border-radius: 99px; font-size: .8125rem; color: var(--ink-soft); white-space: nowrap; }
+.tw-kpis { margin-top: 20px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.tw-kpi { border: 1px solid var(--rule); border-radius: 12px; padding: 16px 18px; background: var(--paper); }
+.tw-kpi p { font-size: .8125rem; font-weight: 600; color: var(--muted); }
+.tw-kpi strong { display: block; margin-top: 6px; font-family: var(--f-display); font-size: clamp(1.75rem, 3vw, 2.25rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1; }
+.tw-kpi em { display: block; margin-top: 6px; font-style: normal; font-size: .8125rem; color: var(--pass); }
+.tw-ctrl { margin-top: 16px; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; font-size: .875rem; }
+.tw-ctrl label { font-weight: 600; }
+.tw-ctrl input[type=range] { width: min(260px, 60vw); accent-color: var(--pass); }
+.tw-ctrl output { color: var(--muted); }
+.tw-charts { margin-top: 18px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.tw-chart { border: 1px solid var(--rule); border-radius: 12px; padding: 14px 14px 6px; background: var(--paper); min-width: 0; }
+.tw-chart h3 { font-size: .9375rem; font-weight: 600; text-align: center; }
+.tw-chart svg { display: block; width: 100%; height: auto; margin-top: 6px; overflow: visible; }
+.tw-chart .grid { stroke: var(--rule); stroke-width: 1; }
+.tw-chart .tick { fill: var(--muted); font-size: 11px; font-family: var(--f-mono); }
+.tw-chart .area { fill: var(--pass); opacity: .12; }
+.tw-chart .stroke { fill: none; stroke: var(--pass); stroke-width: 2.5; stroke-linejoin: round; }
+.tw-chart .dot { fill: var(--surface); stroke: var(--pass); stroke-width: 2; cursor: pointer; }
+.tw-chart .dot:hover, .tw-chart .dot:focus { fill: var(--pass); outline: none; }
+.tw-chart .bar { fill: var(--c2); cursor: pointer; }
+.tw-chart .bar:hover, .tw-chart .bar:focus { fill: var(--pass); outline: none; }
+.tw-tip { margin-top: 12px; font-size: .8125rem; color: var(--muted); min-height: 1.4em; }
+.dash-facts { list-style: none; padding: 0; margin: 12px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.dash-facts li { padding: 8px 14px; border: 1px solid var(--rule); border-radius: 99px; background: var(--surface); font-size: .8125rem; color: var(--ink-soft); }
+.dash-facts strong { font-family: var(--f-mono); font-weight: 500; color: var(--ink); margin-right: 4px; }
+@media (max-width: 860px) { .tw-charts { grid-template-columns: 1fr; } }
+@media (max-width: 560px) { .tw-kpis { grid-template-columns: 1fr; } }
+
+/* modo embutido no portfólio */
+.embed body { background: var(--surface); }
+.embed .topbar, .embed .footer, .embed .dash-head, .embed .dash-method, .embed .skip-link { display: none; }
+.embed .dash { padding: 0; }
+.embed .wrap { padding: 0 16px 16px; max-width: none; }
+.embed .tw { margin-top: 16px; }

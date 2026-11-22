@@ -12,8 +12,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,650;12..96,750&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20261122f">
-  <link rel="stylesheet" href="css/dashboard.css?v=20261122f">
+  <link rel="stylesheet" href="css/style.css?v=20261122i">
+  <link rel="stylesheet" href="css/dashboard.css?v=20261122i">
   <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
@@ -43,13 +43,43 @@
         <p class="dash-lead">Dados reais, contados no código dos 12 repositórios públicos de automação em 22 de novembro de 2026. Passe o mouse nos gráficos e use os filtros para explorar.</p>
       </div>
 
-      <ul class="dash-kpis" aria-label="Indicadores">
-        <li><strong>104</strong><span>cenários automatizados</span><em>Web, API, Mobile, acessibilidade e híbridos</em></li>
-        <li><strong>7</strong><span>scripts de carga</span><em>smoke, load, stress, spike e thresholds no k6</em></li>
-        <li><strong>12</strong><span>testes unitários</span><em>nas ferramentas e gems que publiquei</em></li>
-        <li><strong>6/12</strong><span>projetos com CI</span><em>GitHub Actions, Jenkins e GitLab CI</em></li>
-        <li><strong>4/12</strong><span>projetos em Docker</span><em>execução reproduzível, sem setup local</em></li>
-        <li><strong>376</strong><span>commits</span><em>de 2021 a 2026, todos de minha autoria</em></li>
+      <section class="tw" aria-labelledby="tw-title">
+        <div class="tw-top">
+          <div>
+            <h2 id="tw-title">Evolução da automação</h2>
+            <p class="dash-sub">Cenários acumulados e commits por trimestre, reconstruídos a partir do histórico de cada repositório.</p>
+          </div>
+          <span class="tw-badge">Dados reais do Git</span>
+        </div>
+        <div class="tw-kpis">
+          <div class="tw-kpi"><p>Cenários automatizados</p><strong id="k-cen">104</strong><em id="k-cen-d"></em></div>
+          <div class="tw-kpi"><p>Commits na janela</p><strong id="k-com">376</strong><em id="k-com-d"></em></div>
+          <div class="tw-kpi"><p>Projetos com atividade</p><strong id="k-proj">12</strong><em id="k-proj-d"></em></div>
+        </div>
+        <div class="tw-ctrl">
+          <label for="tw-range">Janela de tempo</label>
+          <input type="range" id="tw-range" min="4" max="24" step="1" value="24">
+          <output id="tw-out" for="tw-range">últimos 24 trimestres</output>
+        </div>
+        <div class="tw-charts">
+          <div class="tw-chart">
+            <h3>Cenários automatizados acumulados</h3>
+            <svg id="line" viewBox="0 0 520 240" role="img" aria-label="Cenários acumulados por trimestre"></svg>
+          </div>
+          <div class="tw-chart">
+            <h3>Commits por trimestre</h3>
+            <svg id="bars" viewBox="0 0 520 240" role="img" aria-label="Commits por trimestre"></svg>
+          </div>
+        </div>
+        <p class="tw-tip" id="tw-tip">Passe o mouse nos pontos e nas barras para ver o trimestre.</p>
+      </section>
+
+      <ul class="dash-facts" aria-label="Outros indicadores">
+        <li><strong>7</strong> scripts de carga no k6</li>
+        <li><strong>12</strong> testes unitários nas ferramentas</li>
+        <li><strong>6/12</strong> projetos com CI configurado</li>
+        <li><strong>4/12</strong> projetos em Docker</li>
+        <li><strong>18</strong> requisitos rastreados por tag</li>
       </ul>
 
       <div class="dash-grid">
@@ -66,13 +96,6 @@
           <h2 id="c-projeto">Cenários por projeto</h2>
           <p class="dash-sub">Testes escritos em cada repositório.</p>
           <div class="hbars" id="hbars" role="img" aria-label="Cenários por projeto: Karate API Framework 29, Automação QA Playground 28, Ruby E2E Framework 18, Robot Framework 12, Testes de API com Cypress 8, Automação Mobile Android 5, Login E2E com Cypress 3, Cypress + Cucumber 1."></div>
-        </section>
-
-        <section class="dash-card dash-wide" aria-labelledby="c-tempo">
-          <h2 id="c-tempo">Commits por ano</h2>
-          <p class="dash-sub">Atividade nos repositórios de automação. Cada cor é um projeto.</p>
-          <div class="cols" id="cols" role="img" aria-label="Commits por ano: 2021, 74; 2022, 5; 2023, 40; 2024, 0; 2025, 241; 2026, 16."></div>
-          <p class="dash-foot" id="cols-detail">Passe o mouse ou toque em uma coluna para ver os projetos.</p>
         </section>
 
         <section class="dash-card dash-wide" aria-labelledby="c-regressao">
@@ -124,7 +147,7 @@
           <li><strong>Cenários:</strong> blocos <code>Scenario</code>/<code>Cenário</code> nos arquivos Gherkin, testes <code>it()</code> do Cypress e casos de teste do Robot Framework nas pastas <code>tests/</code>. Features auxiliares do Karate marcadas com <code>@ignore</code> não entram.</li>
           <li><strong>Testes escritos, não execuções:</strong> o painel mostra o que existe no código. Ele não mostra taxa de sucesso.</li>
           <li><strong>CI configurado não é CI verde:</strong> no Ruby E2E Framework o pipeline está pausado (só disparo manual), a suíte do Karate API Framework ainda não teve a primeira execução completa, e o workflow do BDD GenerationX cuida de versionamento.</li>
-          <li><strong>Commits:</strong> histórico completo de cada repositório, contado por ano.</li>
+          <li><strong>Evolução no tempo:</strong> para cada commit de cada repositório, os testes foram recontados naquela versão do código; o gráfico soma o último valor de cada projeto ao fim de cada trimestre. Commits são contados pela data do histórico completo.</li>
         </ul>
       </section>
     </div>
@@ -136,6 +159,6 @@
     </div>
   </footer>
 
-  <script src="js/dashboard.js?v=20261122f"></script>
+  <script src="js/dashboard.js?v=20261122i"></script>
 </body>
 </html>

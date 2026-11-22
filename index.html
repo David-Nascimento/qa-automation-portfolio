@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,650;12..96,750&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20261122f">
+  <link rel="stylesheet" href="css/style.css?v=20261122i">
   <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
@@ -42,7 +42,6 @@
           <li><a href="#experiencia">Experiência</a></li>
           <li><a href="#projetos">Projetos</a></li>
           <li><a href="#como-testo">Como testo</a></li>
-          <li><a href="#stack">Stack</a></li>
           <li><a href="dashboard.html" class="nav-dash">Dashboard</a></li>
           <li><a href="#contato" class="nav-cta">Contato</a></li>
         </ul>
@@ -106,114 +105,61 @@
     <section class="section" id="experiencia" aria-labelledby="exp-title">
       <div class="wrap">
         <div class="section-head">
-          <h2 id="exp-title">Experiência</h2>
-          <p>Do teste manual à engenharia de qualidade em projetos de alta criticidade.</p>
+          <div>
+            <p class="how-label">Experiência</p>
+            <h2 id="exp-title">Do teste manual à engenharia de qualidade.</h2>
+          </div>
+          <p>Dos testes manuais em sistemas de saúde à automação Mobile, de APIs e de ponta a ponta no setor financeiro.</p>
         </div>
-
-        <ol class="jobs">
-          <li class="job job-current">
-            <div class="job-where">
-              <p class="job-company">Datum</p>
-              <p class="job-context">Projeto financeiro</p>
-              <p class="job-period">fev 2026 – atual</p>
-              <span class="job-now">Atual</span>
-            </div>
-            <div class="job-what">
-              <h3>Senior QA Engineer</h3>
-              <p>
-                Sigo no mesmo projeto do setor financeiro, agora pela Datum, mantendo e
-                evoluindo a automação de testes de aplicativos Mobile, APIs e integrações
-                críticas.
-              </p>
-              <ul>
-                <li>Evolução das suítes Mobile para Android e iOS com Appium</li>
-                <li>Automação de APIs REST com Karate DSL</li>
-                <li>Validação de fluxos financeiros críticos de ponta a ponta</li>
-                <li>Execução paralela no CI e em nuvem com BrowserStack</li>
-              </ul>
-              <p class="job-tools">Appium, Karate DSL, Java, SQL, BrowserStack, CI/CD</p>
-            </div>
+        <div class="exp-grid">
+          <ol class="timeline">
+          <li class="tl-item is-current">
+            <div class="tl-meta"><span class="tl-company">Datum · Projeto financeiro <span class="job-now">Atual</span></span><span class="tl-date">fev 2026 – atual</span></div>
+            <h3>Senior QA Engineer</h3>
+              <p>Sigo no mesmo projeto do setor financeiro, agora pela Datum, mantendo e evoluindo a automação de aplicativos Mobile, APIs e integrações críticas.</p>
+              <p>Evoluo as suítes Mobile para Android e iOS com Appium, automatizo APIs REST com Karate DSL e valido fluxos financeiros de ponta a ponta, com execução paralela no CI e no BrowserStack.</p>
           </li>
-
-          <li class="job">
-            <div class="job-where">
-              <p class="job-company">Keeggo</p>
-              <p class="job-context">Projeto financeiro</p>
-              <p class="job-period">nov 2021 – fev 2026 <span class="job-dur">4 anos e 4 meses</span></p>
-            </div>
-            <div class="job-what">
-              <h3>Senior QA Engineer / SDET</h3>
-              <p>
-                Responsável pela automação de testes de ponta a ponta em um projeto de alta
-                criticidade do setor financeiro, cobrindo aplicativos Mobile, APIs e
-                integrações complexas entre serviços.
-              </p>
-              <ul>
-                <li>Automação Mobile para Android e iOS com Appium</li>
-                <li>Automação de APIs REST com Karate DSL</li>
-                <li>Validação de fluxos financeiros críticos de ponta a ponta</li>
-                <li>Execução em nuvem com BrowserStack e paralelismo no CI</li>
-              </ul>
-              <p class="job-tools">Appium, Karate DSL, BrowserStack, CI/CD</p>
-            </div>
+          <li class="tl-item">
+            <div class="tl-meta"><span class="tl-company">Keeggo · Projeto financeiro</span><span class="tl-date">nov 2021 – fev 2026 · 4 anos e 4 meses</span></div>
+            <h3>Senior QA Engineer / SDET</h3>
+              <p>Responsável pela automação de ponta a ponta em um projeto de alta criticidade do setor financeiro, cobrindo aplicativos Mobile, APIs e integrações complexas entre serviços.</p>
+              <p>Automação Mobile para Android e iOS com Appium, APIs REST com Karate DSL, validação de fluxos financeiros críticos e execução em nuvem com BrowserStack e paralelismo no CI.</p>
           </li>
-
-          <li class="job">
-            <div class="job-where">
-              <p class="job-company">TALLOS</p>
-            </div>
-            <div class="job-what">
-              <h3>QA Automation Engineer</h3>
-              <p>
-                Automação de testes Web e de APIs, com participação ativa na definição
-                dos cenários críticos e na integração dos testes ao pipeline.
-              </p>
-              <ul>
-                <li>Automação de testes Web e de APIs</li>
-                <li>Cenários BDD com Cucumber</li>
-                <li>Testes de integração entre serviços</li>
-                <li>Execução contínua com Jenkins</li>
-              </ul>
-              <p class="job-tools">Cucumber, Jenkins, Testes de API, BDD</p>
-            </div>
+          <li class="tl-item">
+            <div class="tl-meta"><span class="tl-company">TALLOS</span></div>
+            <h3>QA Automation Engineer</h3>
+              <p>Automação de testes Web e de APIs, com participação na definição dos cenários críticos e na integração dos testes ao pipeline.</p>
+              <p>Cenários BDD com Cucumber, testes de integração entre serviços e execução contínua com Jenkins.</p>
           </li>
-
-          <li class="job">
-            <div class="job-where">
-              <p class="job-company">Hapvida</p>
-              <p class="job-context">Saúde</p>
-            </div>
-            <div class="job-what">
-              <h3>QA Analyst</h3>
-              <p>
-                Testes funcionais e de regressão em sistemas hospitalares críticos, com foco
-                em estabilidade, confiabilidade e aderência a requisitos regulatórios.
-              </p>
-              <ul>
-                <li>Testes funcionais e de regressão</li>
-                <li>Homologação de sistemas hospitalares</li>
-                <li>Validação de regras de negócio</li>
-                <li>Documentação e evidências de teste</li>
-              </ul>
-              <p class="job-tools">Testes funcionais, Regressão, Homologação</p>
-            </div>
+          <li class="tl-item">
+            <div class="tl-meta"><span class="tl-company">Hapvida · Saúde</span></div>
+            <h3>QA Analyst</h3>
+              <p>Testes funcionais e de regressão em sistemas hospitalares críticos, com foco em estabilidade, confiabilidade e aderência a requisitos regulatórios.</p>
+              <p>Homologação, validação de regras de negócio, documentação e evidências de teste.</p>
           </li>
-
-          <li class="job">
-            <div class="job-where">
-              <p class="job-company">Início de carreira</p>
-              <p class="job-context">Base em qualidade de software</p>
-            </div>
-            <div class="job-what">
-              <h3>QA Analyst / Homologador</h3>
-              <p>
-                Testes manuais, escrita de casos e cenários de teste e suporte direto aos
-                times de desenvolvimento, aprendendo o ciclo de vida do software na prática.
-              </p>
-              <p class="job-tools">Testes manuais, Casos de teste, SDLC, Métodos ágeis</p>
-            </div>
+          <li class="tl-item">
+            <div class="tl-meta"><span class="tl-company">Início de carreira</span></div>
+            <h3>QA Analyst / Homologador</h3>
+              <p>Testes manuais, escrita de casos e cenários de teste e suporte direto aos times de desenvolvimento, aprendendo o ciclo de vida do software na prática.</p>
           </li>
-        </ol>
+          </ol>
+          <aside class="tools-card" aria-labelledby="tools-title">
+            <p class="tools-title" id="tools-title">Ferramentas que uso</p>
+            <p class="tools-sub">Ruby, Java, JavaScript e Python</p>
+            <p class="tools-group">Mobile e Web</p>
+            <ul class="tools-chips"><li>Appium</li><li>BrowserStack</li><li>Cypress</li><li>Selenium</li><li>Capybara</li><li>Cucumber</li><li>RSpec</li></ul>
+            <p class="tools-group">APIs e integrações</p>
+            <ul class="tools-chips"><li>Karate DSL</li><li>HTTParty</li><li>Postman</li><li>Newman</li><li>Insomnia</li><li>RabbitMQ</li><li>Testes de contrato</li></ul>
+            <p class="tools-group">CI/CD e nuvem</p>
+            <ul class="tools-chips"><li>GitHub Actions</li><li>Jenkins</li><li>GitLab CI</li><li>Docker</li></ul>
+            <p class="tools-group">Performance e observabilidade</p>
+            <ul class="tools-chips"><li>k6</li><li>JMeter</li><li>Datadog</li><li>Kibana</li><li>Elasticsearch</li></ul>
+            <p class="tools-group">IA aplicada a testes</p>
+            <ul class="tools-chips tools-ai"><li>Claude</li><li>ChatGPT</li><li>Gemini</li><li>DeepSeek</li></ul>
+            <p class="tools-group">Práticas</p>
+            <ul class="tools-chips"><li>BDD</li><li>TDD</li><li>Page Objects</li><li>Dados de teste</li><li>Testes baseados em risco</li></ul>
+          </aside>
+        </div>
       </div>
     </section>
 
@@ -221,218 +167,83 @@
     <section class="section section-alt" id="projetos" aria-labelledby="proj-title">
       <div class="wrap">
         <div class="section-head">
-          <h2 id="proj-title">Projetos</h2>
-          <p>Aplicações que construí e publiquei, de ferramentas para QA a produtos completos.</p>
+          <div>
+            <p class="how-label">Projetos</p>
+            <h2 id="proj-title">O que construí e publiquei.</h2>
+          </div>
+          <p>Ferramentas para QA que estão no ar, e os repositórios de automação de testes.</p>
         </div>
 
-        <article class="case case-featured">
-          <header class="case-head">
-            <div>
-              <span class="case-badge">Destaque</span>
-              <h3>QA AI Agent</h3>
-              <p class="case-sub">Qualidade das pipelines de teste em tempo real, com agente de IA</p>
-            </div>
-            <div class="case-links">
-              <a class="demo-link" href="https://david-nascimento.github.io/qa-ai-agent-demo/" target="_blank" rel="noopener noreferrer"><span class="live-dot" aria-hidden="true"></span>Ver demo ao vivo</a>
-              <a href="https://github.com/David-Nascimento/qa-ai-agent-demo" target="_blank" rel="noopener noreferrer">Ver repositório</a>
-            </div>
-          </header>
-          <ul class="case-facts"><li><strong>7</strong> telas</li><li><strong>3</strong> integrações</li><li><strong>137</strong> regras de negócio documentadas</li><li><strong>0</strong> dependências no servidor</li></ul>
-          <div class="case-cols">
-            <div>
-              <h4>Problema</h4>
-              <p>Resultados de testes automatizados ficam espalhados entre builds do Jenkins e issues do Jira, e entender por que uma esteira falhou exige abrir log por log.</p>
-            </div>
-            <div>
-              <h4>Solução</h4>
-              <p>Portal com 7 telas que reúne Jenkins, GitHub Actions e Jira/Zephyr: dashboard, execuções ao vivo, cenários com o último resultado, análises de estabilidade e um agente de QA que explica falhas. Servidor Node.js sem dependências, eventos por SSE e histórico em SQLite.</p>
-            </div>
-            <div>
-              <h4>Resultado</h4>
-              <p>MVP com demonstração online, que roda no navegador com dados de exemplo. HTTPS obrigatório, segredos cifrados com AES-GCM, chave individual por pessoa e registro de auditoria. O código é privado; o repositório público é a vitrine.</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="case">
-          <header class="case-head">
-            <div>
-              <h3>DataSeed</h3>
-              <p class="case-sub">Massa de dados fictícia e realista para testes, por API ou pela tela</p>
-            </div>
-            <div class="case-links">
-              <a href="https://dataseed.onrender.com/" target="_blank" rel="noopener noreferrer">Abrir aplicação</a>
-              <a href="https://github.com/David-Nascimento/dataseed" target="_blank" rel="noopener noreferrer">Ver código</a>
-            </div>
-          </header>
-          <ul class="case-facts"><li><strong>10</strong> tipos de dado</li><li><strong>2</strong> formatos: JSON e CSV</li><li><strong>1</strong> seed por requisição</li><li><strong>Docker</strong> pronto</li></ul>
-          <div class="case-cols">
-            <div>
-              <h4>Problema</h4>
-              <p>Montar massa de teste à mão é lento, e usar dados reais em homologação é risco. CPF, CNPJ e cartão inventados no improviso ainda falham nas validações do sistema.</p>
-            </div>
-            <div>
-              <h4>Solução</h4>
-              <p>API em Ruby (Sinatra + Puma) e tela web que geram 10 tipos de dado, de pessoa física a pedido, transação e cartão. CPF e CNPJ válidos, cartão que passa no algoritmo de Luhn e já vem mascarado, exportação em JSON e CSV e seed determinística para repetir a mesma massa.</p>
-            </div>
-            <div>
-              <h4>Resultado</h4>
-              <p>Publicada no Render e com imagem Docker. A automação chama <code>GET /generate</code> e recebe dados prontos, sem depender do estado de cada ambiente. O primeiro acesso pode levar alguns segundos para o servidor acordar.</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="case">
-          <header class="case-head">
-            <div>
-              <h3>QA Playground</h3>
-              <p class="case-sub">Plataforma em português para praticar QA</p>
-            </div>
-            <div class="case-links">
-              <a href="https://qa-playground-azure.vercel.app/index.html" target="_blank" rel="noopener noreferrer">Abrir aplicação</a>
-              <a href="https://github.com/David-Nascimento/QA-Playground" target="_blank" rel="noopener noreferrer">Ver código</a>
-            </div>
-          </header>
-          <ul class="case-facts"><li><strong>148</strong> páginas de prática</li><li><strong>5</strong> trilhas de nível</li><li><strong>22</strong> páginas de ferramentas</li><li><strong>MIT</strong> licença</li></ul>
-          <div class="case-cols">
-            <div>
-              <h4>Problema</h4>
-              <p>Quem estuda QA encontra aplicações de demonstração instáveis ou irreais, e projetos reais complexos demais para começar.</p>
-            </div>
-            <div>
-              <h4>Solução</h4>
-              <p>148 páginas de prática em trilhas de fundamentos, júnior, pleno, sênior e mobile: de formulários simples a Shadow DOM, iframes, várias janelas e OAuth. Inclui ferramentas como testador de XPath e CSS e uma API mock em Express. Feito com TypeScript e SCSS, sem framework.</p>
-            </div>
-            <div>
-              <h4>Resultado</h4>
-              <p>Publicada na Vercel, gratuita e com licença MIT. A própria plataforma tem 28 cenários automatizados com Cucumber e Capybara, no repositório Automação QA Playground.</p>
-            </div>
-          </div>
-        </article>
+        <div class="pc-grid">
+          <article class="pc pc-featured">
+            <span class="case-badge">Destaque</span><h3>QA AI Agent</h3>
+            <p class="pc-sub">Qualidade das pipelines em tempo real, com agente de IA</p>
+            <p class="pc-desc">Reúne Jenkins, GitHub Actions e Jira/Zephyr em uma tela: execuções ao vivo, análises de estabilidade e um agente de QA que explica por que uma esteira falhou.</p>
+            <ul class="pc-facts"><li>7 telas</li><li>3 integrações</li><li>137 regras de negócio</li></ul>
+            <div class="pc-links"><a class="demo-link" href="https://david-nascimento.github.io/qa-ai-agent-demo/" target="_blank" rel="noopener noreferrer"><span class="live-dot" aria-hidden="true"></span>Ver demo ao vivo</a><a href="https://github.com/David-Nascimento/qa-ai-agent-demo" target="_blank" rel="noopener noreferrer">Repositório</a></div>
+            <p class="pc-note">Código privado; o repositório público é a vitrine.</p>
+          </article>
+          <article class="pc">
+            <h3>DataSeed</h3>
+            <p class="pc-sub">Massa de dados fictícia e realista para testes</p>
+            <p class="pc-desc">API e tela que geram 10 tipos de dado, com CPF e CNPJ válidos, cartão que passa no algoritmo de Luhn, exportação em JSON e CSV e seed para repetir a mesma massa.</p>
+            <ul class="pc-facts"><li>Ruby + Sinatra</li><li>JSON e CSV</li><li>Docker</li></ul>
+            <div class="pc-links"><a class="pc-primary" href="https://dataseed.onrender.com/" target="_blank" rel="noopener noreferrer">Abrir aplicação</a><a href="https://github.com/David-Nascimento/dataseed" target="_blank" rel="noopener noreferrer">Código</a></div>
+            <p class="pc-note">O primeiro acesso pode levar alguns segundos.</p>
+          </article>
+          <article class="pc">
+            <h3>QA Playground</h3>
+            <p class="pc-sub">Plataforma em português para praticar QA</p>
+            <p class="pc-desc">148 páginas de prática em trilhas de fundamentos a sênior e mobile, com Shadow DOM, iframes, várias janelas, OAuth e uma API mock para testes.</p>
+            <ul class="pc-facts"><li>148 páginas</li><li>5 trilhas</li><li>Licença MIT</li></ul>
+            <div class="pc-links"><a class="pc-primary" href="https://qa-playground-azure.vercel.app/index.html" target="_blank" rel="noopener noreferrer">Abrir aplicação</a><a href="https://github.com/David-Nascimento/QA-Playground" target="_blank" rel="noopener noreferrer">Código</a></div>
+          </article>
+        </div>
 
         <div class="sub-head">
           <h3 class="sub-title">Automação de testes</h3>
           <a class="dash-cta" href="dashboard.html">Ver os números no dashboard →</a>
         </div>
-        <ul class="repos">
-          <li class="repo">
-            <div class="repo-main">
-              <h4>Ruby E2E Framework</h4>
-              <p>Framework de automação Web, API e acessibilidade com Page Object, execução em paralelo, Docker, relatórios no Allure e rastreabilidade por requisito. Os 18 cenários viram 20 execuções passando, contando os exemplos do Esquema.</p>
+        <div class="rl-grid">
+            <div class="rl-group">
+              <p class="rl-title">Web e E2E</p>
+              <ul class="rl-list">
+                <li><a href="https://github.com/David-Nascimento/ruby-e2e-framework" target="_blank" rel="noopener noreferrer"><span class="rl-name">Ruby E2E Framework</span><span class="rl-tags">Ruby · Cucumber · Selenium</span><span class="rl-arrow" aria-hidden="true">↗</span></a></li>
+                <li><a href="https://github.com/David-Nascimento/automacao-qa-playground" target="_blank" rel="noopener noreferrer"><span class="rl-name">Automação QA Playground</span><span class="rl-tags">Ruby · Capybara</span><span class="rl-arrow" aria-hidden="true">↗</span></a></li>
+                <li><a href="https://github.com/David-Nascimento/cypress-enjoeat" target="_blank" rel="noopener noreferrer"><span class="rl-name">Cypress + Cucumber</span><span class="rl-tags">Cypress · Allure</span><span class="rl-arrow" aria-hidden="true">↗</span></a></li>
+                <li><a href="https://github.com/David-Nascimento/desafio-cypress-qa" target="_blank" rel="noopener noreferrer"><span class="rl-name">Login E2E com Cypress</span><span class="rl-tags">Cypress</span><span class="rl-arrow" aria-hidden="true">↗</span></a></li>
+              </ul>
             </div>
-            <p class="repo-meta">18 cenários · CI manual · Docker · Allure · nov 2026</p>
-            <p class="repo-tags">Ruby, Cucumber, Selenium</p>
-            <a class="repo-link" href="https://github.com/David-Nascimento/ruby-e2e-framework" target="_blank" rel="noopener noreferrer" aria-label="Ver Ruby E2E Framework no GitHub">GitHub</a>
-          </li>
-          <li class="repo">
-            <div class="repo-main">
-              <h4>Karate API Framework</h4>
-              <p>Modelo empresarial de testes de API com ambientes por arquivo, dados gerados, limpeza automática, schemas de contrato e pipelines em Docker, Jenkins e GitHub Actions.</p>
+            <div class="rl-group">
+              <p class="rl-title">APIs</p>
+              <ul class="rl-list">
+                <li><a href="https://github.com/David-Nascimento/karate-api-framework" target="_blank" rel="noopener noreferrer"><span class="rl-name">Karate API Framework</span><span class="rl-tags">Karate · Java · Docker</span><span class="rl-arrow" aria-hidden="true">↗</span></a></li>
+                <li><a href="https://github.com/David-Nascimento/desafio-api-qa" target="_blank" rel="noopener noreferrer"><span class="rl-name">Testes de API com Cypress</span><span class="rl-tags">Cypress · REST</span><span class="rl-arrow" aria-hidden="true">↗</span></a></li>
+              </ul>
             </div>
-            <p class="repo-meta">29 cenários · GitHub Actions e Jenkins · Docker · 1ª execução pendente · nov 2026</p>
-            <p class="repo-tags">Karate, JUnit, Docker</p>
-            <a class="repo-link" href="https://github.com/David-Nascimento/karate-api-framework" target="_blank" rel="noopener noreferrer" aria-label="Ver Karate API Framework no GitHub">GitHub</a>
-          </li>
-          <li class="repo">
-            <div class="repo-main">
-              <h4>DevOps Observability Stack</h4>
-              <p>Ambiente de CI com Jenkins configurado por código, esteira de testes em paralelo, relatórios no Allure, métricas no Prometheus, logs no Loki e painéis e alertas no Grafana.</p>
+            <div class="rl-group">
+              <p class="rl-title">Mobile</p>
+              <ul class="rl-list">
+                <li><a href="https://github.com/David-Nascimento/Appium_failure_helper" target="_blank" rel="noopener noreferrer"><span class="rl-name">Appium Failure Helper</span><span class="rl-tags">Gem Ruby · Appium</span><span class="rl-arrow" aria-hidden="true">↗</span></a></li>
+                <li><a href="https://github.com/David-Nascimento/Ruby_Appium_Android" target="_blank" rel="noopener noreferrer"><span class="rl-name">Automação Mobile Android</span><span class="rl-tags">Appium · Cucumber</span><span class="rl-arrow" aria-hidden="true">↗</span></a></li>
+                <li><a href="https://github.com/David-Nascimento/DesafioQA-NoesisBrasil" target="_blank" rel="noopener noreferrer"><span class="rl-name">Robot Framework Web, API e Mobile</span><span class="rl-tags">Robot · GitLab CI</span><span class="rl-arrow" aria-hidden="true">↗</span></a></li>
+              </ul>
             </div>
-            <p class="repo-meta">10 serviços · 8 jobs · Allure · alertas · Docker Compose · nov 2026</p>
-            <p class="repo-tags">Jenkins, Docker, Grafana</p>
-            <a class="repo-link" href="https://github.com/David-Nascimento/DevOps-Observability-Stack" target="_blank" rel="noopener noreferrer" aria-label="Ver DevOps Observability Stack no GitHub">GitHub</a>
-          </li>
-          <li class="repo">
-            <div class="repo-main">
-              <h4>Cypress + Cucumber (Enjoeat)</h4>
-              <p>Automação E2E de um app de pedidos de restaurante, com cenários em BDD, seletores XPath e relatórios no Allure.</p>
+            <div class="rl-group">
+              <p class="rl-title">CI, performance e observabilidade</p>
+              <ul class="rl-list">
+                <li><a href="https://github.com/David-Nascimento/DevOps-Observability-Stack" target="_blank" rel="noopener noreferrer"><span class="rl-name">DevOps Observability Stack</span><span class="rl-tags">Jenkins · Docker · Grafana</span><span class="rl-arrow" aria-hidden="true">↗</span></a></li>
+                <li><a href="https://github.com/David-Nascimento/k6-performance" target="_blank" rel="noopener noreferrer"><span class="rl-name">Testes de performance</span><span class="rl-tags">k6 · InfluxDB · Grafana</span><span class="rl-arrow" aria-hidden="true">↗</span></a></li>
+              </ul>
             </div>
-            <p class="repo-meta">1 cenário BDD · Allure · fev 2026</p>
-            <p class="repo-tags">Cypress, Cucumber, Allure</p>
-            <a class="repo-link" href="https://github.com/David-Nascimento/cypress-enjoeat" target="_blank" rel="noopener noreferrer" aria-label="Ver Cypress + Cucumber (Enjoeat) no GitHub">GitHub</a>
-          </li>
-          <li class="repo">
-            <div class="repo-main">
-              <h4>Automação QA Playground</h4>
-              <p>Suíte BDD dos fluxos de login, cadastro, formulário e OTP do QA Playground, com Page Object e relatórios no Allure.</p>
+            <div class="rl-group">
+              <p class="rl-title">Ferramentas com IA</p>
+              <ul class="rl-list">
+                <li><a href="https://github.com/David-Nascimento/bdd-generationX" target="_blank" rel="noopener noreferrer"><span class="rl-name">BDD GenerationX</span><span class="rl-tags">Ruby · ChatGPT · Gemini</span><span class="rl-arrow" aria-hidden="true">↗</span></a></li>
+                <li><a href="https://github.com/David-Nascimento/QAXpert" target="_blank" rel="noopener noreferrer"><span class="rl-name">QAXpert</span><span class="rl-tags">Ruby · Gemini</span><span class="rl-arrow" aria-hidden="true">↗</span></a></li>
+              </ul>
             </div>
-            <p class="repo-meta">28 cenários · Page Object · Allure · jan 2026</p>
-            <p class="repo-tags">Ruby, Capybara, Selenium</p>
-            <a class="repo-link" href="https://github.com/David-Nascimento/automacao-qa-playground" target="_blank" rel="noopener noreferrer" aria-label="Ver Automação QA Playground no GitHub">GitHub</a>
-          </li>
-          <li class="repo">
-            <div class="repo-main">
-              <h4>Testes de API com Cypress</h4>
-              <p>Desafio técnico na API Serverest: levantamento de cenários e automação dos endpoints críticos com cy.request.</p>
-            </div>
-            <p class="repo-meta">8 testes · nov 2025</p>
-            <p class="repo-tags">Cypress, JavaScript, REST</p>
-            <a class="repo-link" href="https://github.com/David-Nascimento/desafio-api-qa" target="_blank" rel="noopener noreferrer" aria-label="Ver Testes de API com Cypress no GitHub">GitHub</a>
-          </li>
-          <li class="repo">
-            <div class="repo-main">
-              <h4>Login E2E com Cypress</h4>
-              <p>Desafio técnico da EBAC: fluxo de autenticação automatizado de forma reutilizável e escalável.</p>
-            </div>
-            <p class="repo-meta">3 testes · nov 2025</p>
-            <p class="repo-tags">Cypress, JavaScript</p>
-            <a class="repo-link" href="https://github.com/David-Nascimento/desafio-cypress-qa" target="_blank" rel="noopener noreferrer" aria-label="Ver Login E2E com Cypress no GitHub">GitHub</a>
-          </li>
-          <li class="repo">
-            <div class="repo-main">
-              <h4>Appium Failure Helper</h4>
-              <p>Gem que diagnostica falhas de testes Appium: identifica o tipo de erro, acha o seletor no código e sugere alternativas comparando atributos da tela.</p>
-            </div>
-            <p class="repo-meta">v1.16.1 · 3 testes unitários · Jenkins · nov 2025</p>
-            <p class="repo-tags">Ruby, Appium, RSpec</p>
-            <a class="repo-link" href="https://github.com/David-Nascimento/Appium_failure_helper" target="_blank" rel="noopener noreferrer" aria-label="Ver Appium Failure Helper no GitHub">GitHub</a>
-          </li>
-          <li class="repo">
-            <div class="repo-main">
-              <h4>Automação Mobile Android</h4>
-              <p>Validação de histórias de um e-commerce no app Android, com cenários em Gherkin executados pelo Appium.</p>
-            </div>
-            <p class="repo-meta">5 cenários · mai 2023</p>
-            <p class="repo-tags">Ruby, Appium, Cucumber</p>
-            <a class="repo-link" href="https://github.com/David-Nascimento/Ruby_Appium_Android" target="_blank" rel="noopener noreferrer" aria-label="Ver Automação Mobile Android no GitHub">GitHub</a>
-          </li>
-          <li class="repo">
-            <div class="repo-main">
-              <h4>Robot Framework Web, API e Mobile</h4>
-              <p>Desafio técnico com três suítes separadas para Web, API e Mobile, documentação dos casos e pipeline no GitLab CI com Docker.</p>
-            </div>
-            <p class="repo-meta">12 casos · GitLab CI · Docker · nov 2022</p>
-            <p class="repo-tags">Robot Framework, Python, GitLab CI</p>
-            <a class="repo-link" href="https://github.com/David-Nascimento/DesafioQA-NoesisBrasil" target="_blank" rel="noopener noreferrer" aria-label="Ver Robot Framework Web, API e Mobile no GitHub">GitHub</a>
-          </li>
-          <li class="repo">
-            <div class="repo-main">
-              <h4>Testes de performance</h4>
-              <p>Scripts de smoke, load, stress e spike com thresholds de aprovação, métricas no InfluxDB e painéis no Grafana.</p>
-            </div>
-            <p class="repo-meta">7 scripts · GitHub Actions · Docker · mar 2023</p>
-            <p class="repo-tags">k6, InfluxDB, Grafana</p>
-            <a class="repo-link" href="https://github.com/David-Nascimento/k6-performance" target="_blank" rel="noopener noreferrer" aria-label="Ver Testes de performance no GitHub">GitHub</a>
-          </li>
-          <li class="repo">
-            <div class="repo-main">
-              <h4>BDD GenerationX</h4>
-              <p>Gem que gera arquivos .feature e steps automaticamente a partir de histórias em texto, seguindo padrões ISTQB.</p>
-            </div>
-            <p class="repo-meta">v2.4.20 · 6 testes unitários · 153 commits · ago 2025</p>
-            <p class="repo-tags">Ruby, Gherkin, CLI</p>
-            <a class="repo-link" href="https://github.com/David-Nascimento/bdd-generationX" target="_blank" rel="noopener noreferrer" aria-label="Ver BDD GenerationX no GitHub">GitHub</a>
-          </li>
-          <li class="repo">
-            <div class="repo-main">
-              <h4>QAXpert</h4>
-              <p>CLI com IA que lê o código Ruby e sugere cenários de teste em BDD, usando a API do Gemini.</p>
-            </div>
-            <p class="repo-meta">3 testes unitários · mai 2025</p>
-            <p class="repo-tags">Ruby, IA, Gemini</p>
-            <a class="repo-link" href="https://github.com/David-Nascimento/QAXpert" target="_blank" rel="noopener noreferrer" aria-label="Ver QAXpert no GitHub">GitHub</a>
-          </li>
-        </ul>
+        </div>
       </div>
     </section>
 
@@ -440,8 +251,11 @@
     <section class="section" id="como-testo" aria-labelledby="how-title">
       <div class="wrap">
         <div class="section-head">
-          <h2 id="how-title">Como eu testo</h2>
-          <p>O raciocínio por trás dos testes, com exemplos reais tirados dos meus repositórios. Cada bloco leva ao arquivo original.</p>
+          <div>
+            <p class="how-label">Como eu testo</p>
+            <h2 id="how-title">O raciocínio por trás dos testes.</h2>
+          </div>
+          <p>Exemplos reais tirados dos meus repositórios. Cada bloco leva ao arquivo original.</p>
         </div>
 
         <nav class="how-jump" aria-label="Partes desta seção">
@@ -687,33 +501,16 @@
         <!-- 03 MÉTRICAS -->
         <div class="how-block" id="metricas">
           <div class="how-label"><span class="how-num">03</span>Métricas</div>
-          <h3 class="how-title">O que já está automatizado.</h3>
-          <p class="how-lead">Números contados no código dos 12 repositórios públicos de automação. O dashboard completo tem os gráficos interativos, a atividade por ano e a tabela de práticas por projeto.</p>
+          <h3 class="how-title">A automação, ao longo do tempo.</h3>
+          <p class="how-lead">Mova a janela de tempo e passe o mouse nos gráficos. Role dentro do painel para ver as camadas, os perfis de execução e a tabela de projetos.</p>
 
-          <ul class="stats">
-            <li><strong>104</strong><span>cenários automatizados de Web, API, Mobile e acessibilidade</span></li>
-            <li><strong>18</strong><span>requisitos rastreados por tag no Ruby E2E Framework</span></li>
-            <li><strong>6/12</strong><span>projetos com pipeline de CI configurado</span></li>
-            <li><strong>376</strong><span>commits nos repositórios de automação, de 2021 a 2026</span></li>
-          </ul>
-
-          <div class="layer-card">
-            <div class="layer-head">
-              <p class="bars-title">Cenários por camada</p>
-              <a class="dash-cta" href="dashboard.html">Abrir o dashboard completo →</a>
-            </div>
-            <div class="layer-bar" role="img" aria-label="Cenários por camada: API 47, Web 41, Mobile 10, Acessibilidade 4, Híbrido 2.">
-              <span style="--v:47;--c:var(--pass)"></span><span style="--v:41;--c:var(--lc2)"></span><span style="--v:10;--c:var(--lc3)"></span><span style="--v:4;--c:var(--lc4)"></span><span style="--v:2;--c:var(--lc5)"></span>
-            </div>
-            <ul class="layer-legend">
-              <li><i style="background:var(--pass)"></i>API <b>47</b></li>
-              <li><i style="background:var(--lc2)"></i>Web <b>41</b></li>
-              <li><i style="background:var(--lc3)"></i>Mobile <b>10</b></li>
-              <li><i style="background:var(--lc4)"></i>Acessibilidade <b>4</b></li>
-              <li><i style="background:var(--lc5)"></i>Híbrido <b>2</b></li>
-            </ul>
+          <div class="embed-card">
+            <iframe src="dashboard.html?embed" title="Dashboard de qualidade com dados reais dos repositórios" loading="lazy"></iframe>
           </div>
-          <p class="how-note">Conta testes escritos, não execuções. Além dos cenários, há 7 scripts de carga no k6 e 12 testes unitários nas ferramentas. A forma de contagem está explicada no dashboard.</p>
+          <div class="embed-foot">
+            <p>Dados reais do Git, contados nos repositórios públicos. Conta testes escritos, não execuções.</p>
+            <a class="dash-cta" href="dashboard.html" target="_blank" rel="noopener">Abrir dashboard completo ↗</a>
+          </div>
         </div>
 
         <!-- 04 API -->
@@ -989,89 +786,98 @@
               </div>
             </div>
           </div>
+          <details class="run-local">
+            <summary>Rodar o projeto localmente</summary>
+            <div class="rl-body">
+              <ol class="run-steps">
+                <li>
+                  <p><strong>Clonar o repositório</strong></p>
+                  <p>Precisa de Java 17 ou superior e Maven 3.8 ou superior. O Docker é opcional.</p>
+<pre class="code"><code>git clone https://github.com/David-Nascimento/karate-api-framework.git
+cd karate-api-framework</code></pre>
+                </li>
+                <li>
+                  <p><strong>Conferir os helpers</strong></p>
+                  <p>Os testes unitários do código de apoio não precisam de rede nem da API.</p>
+<pre class="code"><code>mvn test -Dtest=DataFactoryTest</code></pre>
+                </li>
+                <li>
+                  <p><strong>Rodar a suíte</strong></p>
+                  <p>Contra a API pública, ou contra uma cópia local do ServeRest, que é mais rápida e não afeta o ambiente compartilhado.</p>
+<pre class="code"><code><span class="c-comment"># API pública</span>
+mvn test -Dkarate.env=dev
+
+<span class="c-comment"># API local</span>
+docker compose up -d serverest
+mvn test -Dkarate.env=local
+
+<span class="c-comment"># só esta jornada, ou só o smoke</span>
+mvn test -Pe2e
+mvn test -Psmoke</code></pre>
+                </li>
+                <li>
+                  <p><strong>Sem Java instalado</strong></p>
+                  <p>O Docker sobe a API, espera ela ficar saudável e roda a suíte num container.</p>
+<pre class="code"><code>docker compose --profile testes up --build --abort-on-container-exit --exit-code-from testes</code></pre>
+                </li>
+              </ol>
+              <p class="run-note">O relatório fica em <code>target/karate-reports/karate-summary.html</code>. Esta página explica o cenário; ela não envia requisições nem mostra uma execução gravada.</p>
+            </div>
+          </details>
+
+          <details class="run-local">
+            <summary>Outros cenários da suíte: 28 além desta jornada</summary>
+            <div class="rl-body">
+              <p class="run-note">Cada domínio da API tem a própria feature, com caminho feliz, validações e permissões.</p>
+              <div class="feat-grid">
+                <div class="feat-group">
+                  <p><strong>Autenticação</strong> <span>4 cenários</span> <a href="https://github.com/David-Nascimento/karate-api-framework/blob/main/src/test/resources/features/auth/login.feature" target="_blank" rel="noopener noreferrer"><code>login.feature</code> ↗</a></p>
+                  <ul><li>Login com credenciais válidas retorna token Bearer</li><li>Login com credenciais inválidas é recusado (vários casos)</li><li>Login com e-mail em formato inválido retorna erro de validação</li><li>Login sem senha retorna erro de validação</li></ul>
+                </div>
+                <div class="feat-group">
+                  <p><strong>Usuários</strong> <span>8 cenários</span> <a href="https://github.com/David-Nascimento/karate-api-framework/blob/main/src/test/resources/features/usuarios/usuarios.feature" target="_blank" rel="noopener noreferrer"><code>usuarios.feature</code> ↗</a></p>
+                  <ul><li>Cadastrar usuário com dados válidos</li><li>Não permite cadastrar dois usuários com o mesmo e-mail</li><li>Consultar usuário por id retorna os dados cadastrados</li><li>Consultar usuário inexistente retorna 400</li><li>Listar usuários retorna a contagem e a lista</li><li>Alterar dados de um usuário</li><li>Excluir usuário</li><li>Cadastro sem campo obrigatório é recusado (vários casos)</li></ul>
+                </div>
+                <div class="feat-group">
+                  <p><strong>Produtos</strong> <span>9 cenários</span> <a href="https://github.com/David-Nascimento/karate-api-framework/blob/main/src/test/resources/features/produtos/produtos.feature" target="_blank" rel="noopener noreferrer"><code>produtos.feature</code> ↗</a></p>
+                  <ul><li>Cadastrar produto como administrador</li><li>Cadastro sem token é recusado</li><li>Usuário comum não pode cadastrar produto</li><li>Não permite dois produtos com o mesmo nome</li><li>Consultar produto por id retorna os dados cadastrados</li><li>Consultar produto inexistente retorna 400</li><li>Alterar produto como administrador</li><li>Excluir produto como administrador</li><li>Listar produtos retorna a contagem e a lista</li></ul>
+                </div>
+                <div class="feat-group">
+                  <p><strong>Carrinhos</strong> <span>7 cenários</span> <a href="https://github.com/David-Nascimento/karate-api-framework/blob/main/src/test/resources/features/carrinhos/carrinhos.feature" target="_blank" rel="noopener noreferrer"><code>carrinhos.feature</code> ↗</a></p>
+                  <ul><li>Cliente cria carrinho com produto em estoque</li><li>Criar carrinho sem token é recusado</li><li>Não permite mais de um carrinho por usuário</li><li>Produto inexistente não pode ser adicionado ao carrinho</li><li>Quantidade acima do estoque é recusada</li><li>Concluir compra remove o carrinho</li><li>Cancelar compra devolve o estoque do produto</li></ul>
+                </div>
+              </div>
+            </div>
+          </details>
           <p class="how-note">O projeto foi escrito e revisado com base na documentação do Karate e do ServeRest; a primeira execução completa da suíte ainda está pendente, como o README informa. <a href="https://github.com/David-Nascimento/karate-api-framework/blob/main/src/test/resources/features/e2e/jornada-de-compra.feature" target="_blank" rel="noopener noreferrer">Ver o cenário completo ↗</a></p>
         </div>
       </div>
     </section>
 
-    <!-- STACK -->
-    <section class="section section-alt" id="stack" aria-labelledby="stack-title">
-      <div class="wrap">
-        <div class="section-head">
-          <h2 id="stack-title">Stack</h2>
-          <p>Ferramentas que uso no dia a dia para testar, integrar e observar.</p>
-        </div>
-        <dl class="stack">
-          <div>
-            <dt>Linguagens</dt>
-            <dd>Ruby, Java, JavaScript, Python</dd>
-          </div>
-          <div>
-            <dt>Web e Mobile</dt>
-            <dd>Appium, Cypress, Selenium, Capybara, RSpec, Cucumber</dd>
-          </div>
-          <div>
-            <dt>APIs e integrações</dt>
-            <dd>Karate DSL, HTTParty, Postman, Newman, Insomnia, RabbitMQ, testes de contrato</dd>
-          </div>
-          <div>
-            <dt>CI/CD e nuvem</dt>
-            <dd>GitHub Actions, Jenkins, GitLab CI, Docker, BrowserStack</dd>
-          </div>
-          <div>
-            <dt>Performance e observabilidade</dt>
-            <dd>k6, JMeter, Datadog, Kibana, Elasticsearch</dd>
-          </div>
-          <div>
-            <dt>Práticas</dt>
-            <dd>BDD, TDD, Page Objects, gestão de dados de teste, estratégia de testes baseada em risco</dd>
-          </div>
-          <div>
-            <dt>IA aplicada a testes</dt>
-            <dd>Claude, ChatGPT, Gemini e DeepSeek para gerar cenários e casos de teste e para escrever e revisar automação</dd>
-          </div>
-        </dl>
-
-        <div class="principles">
-          <h3 class="sub-title">Como trabalho</h3>
-          <div class="principles-grid">
-            <div>
-              <h4>Automação em que o time confia</h4>
-              <p>Frameworks estáveis e reutilizáveis, rodando no pipeline, com flakiness sob controle e manutenção barata.</p>
-            </div>
-            <div>
-              <h4>Feedback antes do release</h4>
-              <p>Falhas detectadas cedo, menos retrabalho e ciclos de entrega mais previsíveis.</p>
-            </div>
-            <div>
-              <h4>Prioridade pelo risco</h4>
-              <p>Primeiro os fluxos críticos e o comportamento real do usuário, onde a automação traz mais retorno.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- CONTATO -->
-    <section class="contact" id="contato" aria-labelledby="contact-title">
-      <div class="wrap contact-inner">
-        <h2 id="contact-title">Vamos conversar sobre qualidade no seu time?</h2>
-        <p>Estou aberto a oportunidades e conversas sobre automação de testes e engenharia de qualidade.</p>
-        <a class="contact-mail" href="mailto:halison700@gmail.com">halison700@gmail.com</a>
-        <div class="contact-links">
-          <a href="https://www.linkedin.com/in/david-nascimento26/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://github.com/David-Nascimento" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <section class="cta" id="contato" aria-labelledby="contact-title">
+      <div class="wrap cta-inner">
+        <div>
+          <p class="how-label">Vamos conversar</p>
+          <h2 id="contact-title">Tem uma vaga de QA em mente?</h2>
+          <p>Estou aberto a oportunidades e a conversas sobre automação de testes, qualidade e IA aplicada a testes.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="mailto:halison700@gmail.com">Enviar e-mail ↗</a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/david-nascimento26/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          <a class="btn btn-ghost" href="https://github.com/David-Nascimento" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="wrap">
-      <p>© <span id="ano">2026</span> David Nascimento</p>
+    <div class="wrap footer-inner">
+      <p>© <span id="ano">2026</span> David Nascimento · Portfólio de QA</p>
+      <a href="#topo">Voltar ao topo ↑</a>
     </div>
   </footer>
 
-  <script src="js/script.js?v=20261122f"></script>
+  <script src="js/script.js?v=20261122i"></script>
 </body>
 </html>
