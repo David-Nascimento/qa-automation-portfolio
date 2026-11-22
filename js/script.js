@@ -371,7 +371,7 @@ document.querySelectorAll('[data-tabs], [data-api]').forEach((box) => {
       if (j[i].getAttribute('href') === '#' + s) j[i].setAttribute('aria-current', 'true'); else j[i].removeAttribute('aria-current');
     }
   }
-  var items = '.section-head, .how-jump, .how-block.is-sub, .exp-grid > *, .timeline > li, .pc-grid > *, .sub-head, .rl-group, .ct-main > *, .ct-card, .ct-status';
+  var items = '.pager, .section-head, .how-jump, .how-block.is-sub, .exp-grid > *, .timeline > li, .pc-grid > *, .sub-head, .rl-group, .ct-main > *, .ct-card, .ct-status';
   function enter(id) {
     var sec = document.getElementById(id);
     if (!sec || (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) return;
@@ -380,6 +380,20 @@ document.querySelectorAll('[data-tabs], [data-api]').forEach((box) => {
     void sec.offsetWidth;
     for (var k = 0; k < els.length; k++) els[k].classList.add('vin');
   }
+  /* botões Anterior / Próximo no fim de cada tela */
+  var order = [['experiencia', 'Experiência'], ['projetos', 'Projetos'], ['como-testo', 'Como testo'], ['contato', 'Contato']];
+  order.forEach(function (o, i) {
+    var sec = document.getElementById(o[0]);
+    if (!sec) return;
+    var prev = i > 0 ? order[i - 1] : ['topo', 'Início'];
+    var next = order[i + 1];
+    var d = document.createElement('div');
+    d.className = 'pager';
+    d.innerHTML = '<a class="pg-prev" href="#' + prev[0] + '">← ' + prev[1] + '</a>' +
+      (next ? '<a class="pg-next" href="#' + next[0] + '">Próximo: ' + next[1] + ' →</a>'
+            : '<a class="pg-next" href="#topo">Voltar ao início ↺</a>');
+    sec.appendChild(d);
+  });
   /* rolar para baixo na tela inicial abre a primeira seção */
   var wheelLock = 0;
   function nextFromHome() { if (root.getAttribute('data-view') === 'home' && Date.now() - wheelLock > 900) { wheelLock = Date.now(); location.hash = '#experiencia'; } }
@@ -395,7 +409,7 @@ document.querySelectorAll('[data-tabs], [data-api]').forEach((box) => {
     if (!mq.matches || v === 'home') return;
     var sec = document.getElementById(v), w = sec && sec.querySelector(':scope > .wrap');
     if (!w) return;
-    var avail = window.innerHeight - 64 - 40, need = w.scrollHeight;
+    var avail = window.innerHeight - 64 - 84, need = w.scrollHeight;
     var z = Math.max(0.55, Math.min(1, avail / need));
     if (z < 1) w.style.zoom = z.toFixed(3);
   }
