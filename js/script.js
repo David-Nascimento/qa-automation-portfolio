@@ -358,6 +358,7 @@ document.querySelectorAll('[data-tabs], [data-api]').forEach((box) => {
     window.scrollTo({ top: 0, behavior: 'instant' });
     if (id === 'como-testo') setSub(sub || curSub);
     fit();
+    enter(id);
   }
   var subs = ['ia', 'artefatos', 'metricas', 'api'], curSub = 'ia';
   function setSub(s) {
@@ -370,6 +371,20 @@ document.querySelectorAll('[data-tabs], [data-api]').forEach((box) => {
       if (j[i].getAttribute('href') === '#' + s) j[i].setAttribute('aria-current', 'true'); else j[i].removeAttribute('aria-current');
     }
   }
+  var items = '.section-head, .how-jump, .how-block.is-sub, .exp-grid > *, .timeline > li, .pc-grid > *, .sub-head, .rl-group, .ct-main > *, .ct-card, .ct-status';
+  function enter(id) {
+    var sec = document.getElementById(id);
+    if (!sec || (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) return;
+    var els = sec.querySelectorAll(items);
+    for (var i = 0; i < els.length; i++) { els[i].classList.remove('vin'); els[i].style.setProperty('--i', i); }
+    void sec.offsetWidth;
+    for (var k = 0; k < els.length; k++) els[k].classList.add('vin');
+  }
+  /* rolar para baixo na tela inicial abre a primeira seção */
+  var wheelLock = 0;
+  function nextFromHome() { if (root.getAttribute('data-view') === 'home' && Date.now() - wheelLock > 900) { wheelLock = Date.now(); location.hash = '#experiencia'; } }
+  window.addEventListener('wheel', function (e) { if (e.deltaY > 20) nextFromHome(); }, { passive: true });
+  window.addEventListener('keydown', function (e) { if (e.key === 'ArrowDown' || e.key === 'PageDown') nextFromHome(); });
   /* encaixa cada tela na altura da janela, sem barra de rolagem */
   var mq = window.matchMedia('(min-width: 921px) and (min-height: 520px)');
   function fit() {
