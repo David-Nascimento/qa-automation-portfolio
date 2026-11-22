@@ -24,6 +24,7 @@
   --lc3: #9A6B1F;
   --lc4: #7A5A9E;
   --lc5: #B04E2E;
+  --bird: #12171B;
 
   --f-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
   --f-body: "Instrument Sans", "Segoe UI", system-ui, sans-serif;
@@ -57,6 +58,7 @@
     --lc3: #D9B064;
     --lc4: #B8A0DA;
     --lc5: #E89A7C;
+    --bird: #B9C4CE;
     color-scheme: dark;
   }
 }
@@ -81,6 +83,7 @@
   --lc3: #D9B064;
   --lc4: #B8A0DA;
   --lc5: #E89A7C;
+  --bird: #B9C4CE;
   color-scheme: dark;
 }
 
