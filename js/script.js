@@ -389,16 +389,38 @@ document.querySelectorAll('[data-tabs], [data-api]').forEach((box) => {
     var next = order[i + 1];
     var d = document.createElement('div');
     d.className = 'pager';
-    d.innerHTML = '<a class="pg-prev" href="#' + prev[0] + '">← ' + prev[1] + '</a>' +
-      (next ? '<a class="pg-next" href="#' + next[0] + '">Próximo: ' + next[1] + ' →</a>'
-            : '<a class="pg-next" href="#topo">Voltar ao início ↺</a>');
+    d.innerHTML = '<a class="pg-prev" href="#' + prev[0] + '">↑ voltar: ' + prev[1].toLowerCase() + '</a>' +
+      '<a class="pg-next" href="#' + (next ? next[0] : 'topo') + '"><span aria-hidden="true"></span>' +
+      (next ? 'próximo: ' + next[1].toLowerCase() : 'voltar ao início') + '</a>';
     sec.appendChild(d);
   });
   /* rolar para baixo na tela inicial abre a primeira seção */
-  var wheelLock = 0;
-  function nextFromHome() { if (root.getAttribute('data-view') === 'home' && Date.now() - wheelLock > 900) { wheelLock = Date.now(); location.hash = '#experiencia'; } }
-  window.addEventListener('wheel', function (e) { if (e.deltaY > 20) nextFromHome(); }, { passive: true });
-  window.addEventListener('keydown', function (e) { if (e.key === 'ArrowDown' || e.key === 'PageDown') nextFromHome(); });
+  var wheelLock = 0, seq = ['topo', 'experiencia', 'projetos', 'como-testo', 'contato'];
+  function step(dir) {
+    if (Date.now() - wheelLock < 900) return;
+    var v = root.getAttribute('data-view'); v = v === 'home' ? 'topo' : v;
+    if (v !== 'topo' && !root.classList.contains('app')) return;   // no celular a tela rola normalmente
+    var i = seq.indexOf(v) + dir;
+    if (i < 0 || i >= seq.length) return;
+    wheelLock = Date.now();
+    location.hash = '#' + seq[i];
+  }
+  function canScroll(el) {
+    for (; el && el !== document.body; el = el.parentElement) {
+      if (el.scrollHeight > el.clientHeight + 2 && /auto|scroll/.test(getComputedStyle(el).overflowY)) return true;
+    }
+    return false;
+  }
+  window.addEventListener('wheel', function (e) {
+    if (Math.abs(e.deltaY) < 20 || canScroll(e.target)) return;
+    step(e.deltaY > 0 ? 1 : -1);
+  }, { passive: true });
+  window.addEventListener('keydown', function (e) {
+    var t = e.target, tag = t && t.tagName;
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || (t && t.closest && t.closest('[role="tablist"], [data-api]'))) return;
+    if (e.key === 'PageDown' || (e.key === 'ArrowDown' && root.getAttribute('data-view') === 'home')) step(1);
+    if (e.key === 'PageUp') step(-1);
+  });
   /* encaixa cada tela na altura da janela, sem barra de rolagem */
   var mq = window.matchMedia('(min-width: 921px) and (min-height: 520px)');
   function fit() {
