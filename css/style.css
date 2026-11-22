@@ -604,3 +604,9 @@ img, svg { display: block; }
 .sub-head .sub-title { margin: 0; }
 .api-box > *, .tabs, .tab-panel { min-width: 0; }
 @media (max-width: 980px) { .api-box { grid-template-columns: minmax(0, 1fr); } }
+.nav-links .nav-dash { color: var(--pass); font-weight: 600; }
+.btn-dash { display: inline-flex; align-items: center; gap: 8px; color: var(--pass); border-color: var(--pass); }
+.btn-dash:hover { background: var(--pass-soft); }
+.btn-dash .live-dot { background: var(--pass); }
+@media (max-width: 760px) { .nav-links li:nth-last-child(2) { display: block; } }
+@media (max-width: 480px) { .nav-links li:nth-last-child(2) { display: none; } }
