@@ -958,3 +958,41 @@ img, svg { display: block; }
 @media (max-width: 920px), (max-height: 700px) { .spa[data-view="home"] .hero-v2 { overflow-y: auto; } }
 .spa, .spa body { scroll-behavior: auto !important; }
 .spa main > .section, .spa main > .cta { animation: none; transition: none; }
+
+/* ---- modo tela única (desktop): cada tela cabe na janela, sem rolagem ---- */
+.spa.app, .spa.app body { overflow: hidden; height: 100%; }
+.spa.app main > .section, .spa.app main > .cta { height: calc(100svh - 64px); min-height: 0; overflow: hidden; padding: 20px 0; display: flex; align-items: center; }
+.spa.app main > section > .wrap { width: 100%; }
+.spa.app .footer { display: none; }
+.spa.app .section-head { margin-bottom: 20px; gap: 20px; }
+.spa.app .section-head h2 { font-size: clamp(1.6rem, 2.6vw, 2.25rem); }
+.spa.app .how-block { display: none; margin-top: 0; }
+.spa.app .how-block.is-sub { display: block; }
+.spa.app .how-jump { margin-bottom: 20px; }
+.spa.app .how-jump a { padding: 10px 14px; }
+.spa.app .how-jump small { display: none; }
+.spa.app .how-jump a[aria-current] { border-color: var(--pass); background: var(--pass-soft); }
+/* experiência */
+.spa.app .exp-grid { gap: 32px; }
+.spa.app .tl-item { padding-bottom: 0; }
+.spa.app .tl-item p { font-size: .9rem; margin-top: 4px; }
+/* projetos */
+.spa.app .sub-title { margin: 22px 0 10px; font-size: 1.1rem; }
+.spa.app .sub-head { margin: 0; }
+.spa.app .rl-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; }
+.spa.app .rl-tags, .spa.app .rl-arrow { display: none; }
+.spa.app .pc { padding: 18px; }
+.spa.app .pc-desc { font-size: .9rem; }
+.spa.app #como-testo .section-head { display: none; }
+.spa.app .how-lead, .spa.app .how-note, .spa.app .embed-foot p { display: none; }
+.spa.app .how-block .how-label { margin: 0; }
+.spa.app .how-title { font-size: 1.35rem; margin-top: 2px; }
+.spa.app .embed-card iframe { height: calc(100svh - 64px - 40px - 70px - 80px - 50px); min-height: 300px; }
+.spa.app .embed-foot { margin-top: 8px; }
+.spa.app .ai-grid, .spa.app .api-box { margin-top: 14px; }
+.spa.app .ai-card { padding: 16px 18px; }
+.spa.app .run-local { margin-top: 10px; }
+.spa.app .run-local summary { padding: 10px 14px; }
+.spa.app .run-local[open] .rl-body { max-height: 42svh; overflow: auto; }
+.spa.app .tl-item { padding-bottom: 12px; }
+.spa.app .how-jump { padding-bottom: 14px; margin-bottom: 14px; }

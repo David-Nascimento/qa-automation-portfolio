@@ -356,11 +356,37 @@ document.querySelectorAll('[data-tabs], [data-api]').forEach((box) => {
       if (on) nav[i].setAttribute('aria-current', 'page'); else nav[i].removeAttribute('aria-current');
     }
     window.scrollTo({ top: 0, behavior: 'instant' });
-    if (sub) {
-      var t = document.getElementById(sub);
-      if (t) t.scrollIntoView({ behavior: 'instant', block: 'start' });
+    if (id === 'como-testo') setSub(sub || curSub);
+    fit();
+  }
+  var subs = ['ia', 'artefatos', 'metricas', 'api'], curSub = 'ia';
+  function setSub(s) {
+    if (subs.indexOf(s) < 0) s = 'ia';
+    curSub = s;
+    root.setAttribute('data-sub', s);
+    subs.forEach(function (k) { var b = document.getElementById(k); if (b) b.classList.toggle('is-sub', k === s); });
+    var j = document.querySelectorAll('.how-jump a');
+    for (var i = 0; i < j.length; i++) {
+      if (j[i].getAttribute('href') === '#' + s) j[i].setAttribute('aria-current', 'true'); else j[i].removeAttribute('aria-current');
     }
   }
+  /* encaixa cada tela na altura da janela, sem barra de rolagem */
+  var mq = window.matchMedia('(min-width: 921px) and (min-height: 520px)');
+  function fit() {
+    var v = root.getAttribute('data-view');
+    root.classList.toggle('app', mq.matches);
+    var wraps = document.querySelectorAll('.spa main > section > .wrap, .hero-v2-main');
+    for (var i = 0; i < wraps.length; i++) wraps[i].style.zoom = '';
+    if (!mq.matches || v === 'home') return;
+    var sec = document.getElementById(v), w = sec && sec.querySelector(':scope > .wrap');
+    if (!w) return;
+    var avail = window.innerHeight - 64 - 40, need = w.scrollHeight;
+    var z = Math.max(0.55, Math.min(1, avail / need));
+    if (z < 1) w.style.zoom = z.toFixed(3);
+  }
+  window.addEventListener('resize', fit);
+  mq.addEventListener && mq.addEventListener('change', fit);
+  document.addEventListener('click', function () { setTimeout(fit, 0); });
   function route() {
     var h = decodeURIComponent((location.hash || '').slice(1));
     if (inner[h]) return show(inner[h], h);
