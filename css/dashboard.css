@@ -1,11 +1,11 @@
 /* Dashboard de qualidade (usa os tokens de style.css) */
 :root {
-  --c1: #1E7A4E; --c2: #2F6FB3; --c3: #B7791F; --c4: #8E4FB5; --c5: #C2410C; --c6: #0F8B8D;
+  --c1: #41697E; --c2: #5E8A6E; --c3: #9A6B1F; --c4: #7A5A9E; --c5: #B04E2E; --c6: #2F7F80;
 }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) { --c1: #52C893; --c2: #6EA8E8; --c3: #E3B04B; --c4: #C08BE6; --c5: #F08A5D; --c6: #4FC6C8; }
+  :root:not([data-theme="light"]) { --c1: #86B3C8; --c2: #8FBF9E; --c3: #D9B064; --c4: #B8A0DA; --c5: #E89A7C; --c6: #7CC4C0; }
 }
-:root[data-theme="dark"] { --c1: #52C893; --c2: #6EA8E8; --c3: #E3B04B; --c4: #C08BE6; --c5: #F08A5D; --c6: #4FC6C8; }
+:root[data-theme="dark"] { --c1: #86B3C8; --c2: #8FBF9E; --c3: #D9B064; --c4: #B8A0DA; --c5: #E89A7C; --c6: #7CC4C0; }
 
 .dash { padding: clamp(40px, 6vw, 72px) 0 clamp(64px, 8vw, 96px); }
 .dash-head h1 { margin-top: 10px; font-size: clamp(2rem, 4.6vw, 3.25rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; max-width: 16em; }
