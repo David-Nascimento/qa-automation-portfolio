@@ -996,3 +996,18 @@ img, svg { display: block; }
 .spa.app .run-local[open] .rl-body { max-height: 42svh; overflow: auto; }
 .spa.app .tl-item { padding-bottom: 12px; }
 .spa.app .how-jump { padding-bottom: 14px; margin-bottom: 14px; }
+
+/* só a tela ativa existe: a inicial some quando outra seção está aberta */
+.spa:not([data-view="home"]) .hero-v2 { display: none; }
+/* telas estreitas: barra de links fixa embaixo, sempre ao alcance do dedo */
+@media (max-width: 920px) {
+  .spa .topbar { backdrop-filter: none; -webkit-backdrop-filter: none; }
+  .spa .topbar nav { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; background: var(--paper); border-top: 1px solid var(--rule); padding: 8px 8px max(8px, env(safe-area-inset-bottom, 0px)); }
+  .spa .nav-links { display: flex; justify-content: space-around; gap: 4px; width: 100%; }
+  .spa .nav-links li { display: block !important; }
+  .spa .nav-links a { padding: 8px 8px; font-size: .8125rem; border: 0; }
+  .spa .nav-links .nav-dash { display: none; }
+  .spa .nav-links li:has(.nav-dash) { display: none !important; }
+  .spa main { padding-bottom: 64px; }
+  .spa[data-view="home"] .hero-v2 { height: calc(100svh - 64px - 56px); }
+}
