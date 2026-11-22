@@ -330,59 +330,23 @@
         </article>
 
         <h3 class="sub-title">Automação de testes</h3>
-        <article class="case">
-          <header class="case-head">
-            <div>
-              <h3>Ruby E2E Framework</h3>
-              <p class="case-sub">Framework de automação Web, API e acessibilidade em Ruby</p>
-            </div>
-            <div class="case-links">
-              <a href="https://github.com/David-Nascimento/ruby-e2e-framework" target="_blank" rel="noopener noreferrer">Ver código</a>
-            </div>
-          </header>
-          <div class="case-cols">
-            <div>
-              <h4>Problema</h4>
-              <p>Suítes de teste costumam nascer sem estrutura: seletores espalhados, dados fixos, execução só na máquina de quem escreveu e nenhuma checagem de acessibilidade.</p>
-            </div>
-            <div>
-              <h4>Solução</h4>
-              <p>Framework com Cucumber, Selenium e RSpec, usando Page Object, cenários de UI, API e híbridos (a API prepara o dado, a UI valida) e verificação de acessibilidade com axe-core. Execução em paralelo, em Selenium Grid no Docker, com relatórios no Allure e checagem de estilo com RuboCop.</p>
-            </div>
-            <div>
-              <h4>Resultado</h4>
-              <p>20 cenários passando contra o ServeRest, com versão 1.0.0, guia de contribuição e uma linha de base de acessibilidade documentada para os achados conhecidos.</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="case">
-          <header class="case-head">
-            <div>
-              <h3>Karate API Framework</h3>
-              <p class="case-sub">Modelo empresarial de testes de API com Karate</p>
-            </div>
-            <div class="case-links">
-              <a href="https://github.com/David-Nascimento/karate-api-framework" target="_blank" rel="noopener noreferrer">Ver código</a>
-            </div>
-          </header>
-          <div class="case-cols">
-            <div>
-              <h4>Problema</h4>
-              <p>Times que adotam Karate costumam repetir os mesmos problemas: ambientes misturados no código, dados fixos que quebram em paralelo, lixo deixado na API e senhas aparecendo nos logs.</p>
-            </div>
-            <div>
-              <h4>Solução</h4>
-              <p>Projeto de referência com configuração por ambiente, dados gerados por uma fábrica Java, limpeza automática ao fim de cada cenário, schemas de contrato, mascaramento de senhas e tokens nos logs e seleção por tags (smoke, regression e e2e). Inclui Docker Compose com a API local, Jenkinsfile e GitHub Actions.</p>
-            </div>
-            <div>
-              <h4>Resultado</h4>
-              <p>Estrutura documentada (README, arquitetura e contribuição) pronta para ser copiada e adaptada por outras equipes, com cenários de login, usuários, produtos, carrinhos e uma jornada de compra completa.</p>
-            </div>
-          </div>
-        </article>
-
         <ul class="repos">
+          <li class="repo">
+            <div class="repo-main">
+              <h4>Ruby E2E Framework</h4>
+              <p>Framework de automação Web, API e acessibilidade com Page Object, execução em paralelo, Docker, relatórios no Allure e 20 cenários passando.</p>
+            </div>
+            <p class="repo-tags">Ruby, Cucumber, Selenium</p>
+            <a class="repo-link" href="https://github.com/David-Nascimento/ruby-e2e-framework" target="_blank" rel="noopener noreferrer" aria-label="Ver Ruby E2E Framework no GitHub">GitHub</a>
+          </li>
+          <li class="repo">
+            <div class="repo-main">
+              <h4>Karate API Framework</h4>
+              <p>Modelo empresarial de testes de API com ambientes por arquivo, dados gerados, limpeza automática, schemas de contrato e pipelines em Docker, Jenkins e GitHub Actions.</p>
+            </div>
+            <p class="repo-tags">Karate, JUnit, Docker</p>
+            <a class="repo-link" href="https://github.com/David-Nascimento/karate-api-framework" target="_blank" rel="noopener noreferrer" aria-label="Ver Karate API Framework no GitHub">GitHub</a>
+          </li>
           <li class="repo">
             <div class="repo-main">
               <h4>Testes de performance</h4>
