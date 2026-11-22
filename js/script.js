@@ -336,3 +336,42 @@ document.querySelectorAll('[data-tabs], [data-api]').forEach((box) => {
   });
   sync();
 })();
+
+/* ---------- navegação por telas: a inicial fica fixa e o menu abre cada seção ---------- */
+(function () {
+  var root = document.documentElement;
+  var views = ['experiencia', 'projetos', 'como-testo', 'contato'];
+  var inner = { ia: 'como-testo', artefatos: 'como-testo', metricas: 'como-testo', api: 'como-testo' };
+  root.classList.add('spa');
+  function show(id, sub) {
+    var home = views.indexOf(id) < 0;
+    root.setAttribute('data-view', home ? 'home' : id);
+    views.forEach(function (v) {
+      var el = document.getElementById(v);
+      if (el) el.hidden = v !== id;
+    });
+    var nav = document.querySelectorAll('.nav-links a[href^="#"]');
+    for (var i = 0; i < nav.length; i++) {
+      var on = nav[i].getAttribute('href') === '#' + id;
+      if (on) nav[i].setAttribute('aria-current', 'page'); else nav[i].removeAttribute('aria-current');
+    }
+    window.scrollTo(0, 0);
+    if (sub) {
+      var t = document.getElementById(sub);
+      if (t) setTimeout(function () { t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 60);
+    }
+  }
+  function route() {
+    var h = decodeURIComponent((location.hash || '').slice(1));
+    if (inner[h]) return show(inner[h], h);
+    show(views.indexOf(h) >= 0 ? h : 'topo');
+  }
+  window.addEventListener('hashchange', route);
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="#"]');
+    if (!a) return;
+    var h = a.getAttribute('href').slice(1);
+    if (h === location.hash.slice(1) && (views.indexOf(h) >= 0 || inner[h] || h === 'topo')) { e.preventDefault(); route(); }
+  });
+  route();
+})();

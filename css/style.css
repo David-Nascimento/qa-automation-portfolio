@@ -947,14 +947,12 @@ img, svg { display: block; }
 .footer { padding: 36px 0; }
 .section-head p, .how-lead, .tl-item p, .job-what > p { max-width: 52em; }
 
-/* a tela inicial fica parada e as seções deslizam por cima dela */
-main > .section, main > .cta { position: relative; z-index: 1; background: var(--paper); }
-main > .section-alt { background: var(--paper-alt); }
-.footer { position: relative; z-index: 1; background: var(--paper); }
-@media (min-width: 921px) and (min-height: 640px) {
-  .hero-v2 { position: sticky; top: 64px; z-index: 0; min-height: calc(100svh - 64px); }
-}
+/* telas: a inicial é fixa (sem rolagem) e o menu abre cada seção */
+.spa[data-view="home"], .spa[data-view="home"] body { overflow: hidden; height: 100%; }
+.spa[data-view="home"] .hero-v2 { height: calc(100svh - 64px); min-height: 0; overflow: hidden; }
+.spa[data-view="home"] .footer { display: none; }
+.spa [hidden] { display: none !important; }
+.spa main > .section, .spa main > .cta { min-height: calc(100svh - 64px); border-top: 0; }
+.spa .nav-links a[aria-current="page"] { color: var(--ink); background: var(--paper-alt); border-radius: 8px; }
 .topbar { z-index: 50; }
-@media (min-width: 921px) and (min-height: 640px) {
-  #experiencia { box-shadow: 0 -24px 48px -24px rgba(0,0,0,.35); border-top: 0; }
-}
+@media (max-width: 920px), (max-height: 700px) { .spa[data-view="home"] .hero-v2 { overflow-y: auto; } }
